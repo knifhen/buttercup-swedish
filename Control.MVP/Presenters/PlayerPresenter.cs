@@ -20,7 +20,7 @@ namespace Control.MVP.Presenters
         private const string _SMIL_REF_ATTR_NAME = "smilref";
         private readonly PlayerState _state;
 
-        private DispatcherTimer _timer;
+        private readonly DispatcherTimer _nextPhraseDelayTimer;
 
 		#endregion Fields 
 
@@ -79,9 +79,9 @@ namespace Control.MVP.Presenters
             _state = MainState.PlayerState;
             _state.PresentPhrase = PlayPhrase;
             
-            _timer = new DispatcherTimer();
-            _timer.Interval = new TimeSpan(0, 0, 0);
-            _timer.Tick += new EventHandler(MoveNextEvent);
+            _nextPhraseDelayTimer = new DispatcherTimer();
+            _nextPhraseDelayTimer.Interval = new TimeSpan(0, 0, 0);
+            _nextPhraseDelayTimer.Tick += new EventHandler(MoveNextEvent);
         }
 
 		#endregion Constructors 
@@ -262,7 +262,7 @@ namespace Control.MVP.Presenters
         {
             if (_state.Navigator != null)
             {
-                _timer.Start();
+                _nextPhraseDelayTimer.Start();
 
                 /*_state.Navigator.MoveNext();
 
@@ -696,7 +696,7 @@ namespace Control.MVP.Presenters
         /// </summary>
         internal void TryPlay()
         {
-            _timer.Stop();
+            _nextPhraseDelayTimer.Stop();
             //Abort playing if at the end of the book.
             if (_state.Navigator != null && _state.Navigator.AtEndOfBook)
             {
@@ -726,7 +726,7 @@ namespace Control.MVP.Presenters
 
         public void SpeedChanged(int speed)
         {
-            _timer.Interval = new TimeSpan(0, 0, speed);            
+            _nextPhraseDelayTimer.Interval = new TimeSpan(0, 0, speed);            
         }
 
 		#endregion Methods 
