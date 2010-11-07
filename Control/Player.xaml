@@ -113,7 +113,11 @@
             </ToolTipService.ToolTip>
         </bc:MediaVolumeSlider>
         
-        <Slider Name="PlayerSpeed" Grid.Row="4" Grid.ColumnSpan="2" Minimum="0" Maximum="5" />
+        <Slider Name="PlayerSpeed" Grid.Row="4" Grid.ColumnSpan="2" Minimum="0" Maximum="5">
+            <ToolTipService.ToolTip>
+                <bc:ExtendedToolTip Content="Slide to adjust the delay for each line being read."></bc:ExtendedToolTip>
+            </ToolTipService.ToolTip>
+        </Slider>
         
         <MediaElement x:Name="AudioPlayer" AutoPlay="False" />
     </Grid>
