@@ -489,7 +489,123 @@
 			</Grid>
 		</ControlTemplate>
 
-		<ControlTemplate x:Key="ScrollBarThumbStyle" TargetType="Thumb">
+        <ControlTemplate x:Key="DelaySliderThumbStyle" TargetType="Thumb">
+            <Grid>
+                <vsm:VisualStateManager.VisualStateGroups>
+                    <vsm:VisualStateGroup x:Name="FocusStates">
+                        <vsm:VisualState x:Name="Unfocused"/>
+                        <vsm:VisualState x:Name="Focused">
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="focusItem"
+                                        Storyboard.TargetProperty="(Border.Opacity)"
+                                    	To="1" />
+                            </Storyboard>
+                        </vsm:VisualState>
+                    </vsm:VisualStateGroup>
+                    <vsm:VisualStateGroup x:Name="CommonStates">
+                        <vsm:VisualStateGroup.Transitions>
+                            <vsm:VisualTransition From="Normal" To="MouseOver"
+                                    GeneratedDuration="00:00:00.2000000" />
+                            <vsm:VisualTransition From="MouseOver" To="Normal"
+                                    GeneratedDuration="00:00:00.2000000" />
+                            <vsm:VisualTransition From="MouseOver" To="Pressed"
+                                    GeneratedDuration="00:00:00.2000000" />
+                            <vsm:VisualTransition From="Pressed" To="MouseOver"
+                                    GeneratedDuration="00:00:00.2000000" />
+                        </vsm:VisualStateGroup.Transitions>
+                        <vsm:VisualState x:Name="Normal"/>
+                        <vsm:VisualState x:Name="MouseOver">
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="normalItem"
+                                        Storyboard.TargetProperty="(UIElement.Opacity)"
+                                    	To="0.0" />
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="focusItem"
+                                        Storyboard.TargetProperty="(UIElement.Opacity)"
+                                    	To="0.0" />
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="selectedItem"
+                                        Storyboard.TargetProperty="(UIElement.Opacity)"
+                                    	To="1.0" />
+                            </Storyboard>
+                        </vsm:VisualState>
+                        <vsm:VisualState x:Name="Pressed">
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="normalItem"
+                                        Storyboard.TargetProperty="(UIElement.Opacity)"
+                                    	To="0.0" />
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="focusItem"
+                                        Storyboard.TargetProperty="(UIElement.Opacity)"
+                                    	To="0.0" />
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="selectedItem"
+                                        Storyboard.TargetProperty="(UIElement.Opacity)"
+                                    	To="1.0" />
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="selectedItem"
+                                        Storyboard.TargetProperty="Width"
+                                    	To="28" />
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="selectedItem"
+                                        Storyboard.TargetProperty="Height"
+                                    	To="28" />
+                            </Storyboard>
+                        </vsm:VisualState>
+                        <vsm:VisualState x:Name="Disabled">
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.0010000"
+                                        Storyboard.TargetName="disableOverlay"
+                                        Storyboard.TargetProperty="(UIElement.Opacity)"
+                                    	To="0.33" />
+                            </Storyboard>
+                        </vsm:VisualState>
+                    </vsm:VisualStateGroup>
+                </vsm:VisualStateManager.VisualStateGroups>
+
+
+                <Border x:Name="normalItem" Width="28" Height="28" CornerRadius="16" BorderThickness="1.5"
+						Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding Foreground}"
+						Padding="0,0,2,0">
+                    <Canvas Height="12.509" Width="19.532">
+                        <Path Width="7.59906" Height="12.509" Canvas.Left="12" Canvas.Top="0" Stretch="Fill"
+							  Fill="{TemplateBinding Foreground}"
+							  Data="F1 M 11.7721,0L 19.3712,6.25L 11.7721,12.509L 11.7721,0 Z "/>
+                        <Path Width="7.59773" Height="12.509" Canvas.Left="0.228" Canvas.Top="0" Stretch="Fill"
+							  Fill="{TemplateBinding Foreground}"
+							  Data="F1 M 7.59773,12.509L 0,6.25775L 7.59773,0L 7.59773,12.509 Z "/>
+                    </Canvas>
+                </Border>
+                <Border x:Name="focusItem" Width="32" Height="32" CornerRadius="16"
+						Opacity="0" Background="{TemplateBinding FocusBackground}">
+                    <Canvas Height="12.509" Width="19.532">
+                        <Path Width="7.59906" Height="12.509" Canvas.Left="12" Canvas.Top="0" Stretch="Fill"
+							  Fill="{TemplateBinding FocusForeground}"
+							  Data="F1 M 11.7721,0L 19.3712,6.25L 11.7721,12.509L 11.7721,0 Z "/>
+                        <Path Width="7.59773" Height="12.509" Canvas.Left="0.228" Canvas.Top="0" Stretch="Fill"
+							  Fill="{TemplateBinding FocusForeground}"
+							  Data="F1 M 7.59773,12.509L 0,6.25775L 7.59773,0L 7.59773,12.509 Z "/>
+                    </Canvas>
+                </Border>
+                <Border x:Name="selectedItem" Width="28" Height="28" CornerRadius="16"
+						Opacity="0" Background="{TemplateBinding SelectionBackground}">
+                    <Canvas Height="12.509" Width="19.532">
+                        <Path Width="7.59906" Height="12.509" Canvas.Left="12" Canvas.Top="0" Stretch="Fill"
+							  Fill="{TemplateBinding SelectionForeground}"
+							  Data="F1 M 11.7721,0L 19.3712,6.25L 11.7721,12.509L 11.7721,0 Z "/>
+                        <Path Width="7.59773" Height="12.509" Canvas.Left="0.228" Canvas.Top="0" Stretch="Fill"
+							  Fill="{TemplateBinding SelectionForeground}"
+							  Data="F1 M 7.59773,12.509L 0,6.25775L 7.59773,0L 7.59773,12.509 Z "/>
+                    </Canvas>
+                </Border>
+                <Rectangle x:Name="disableOverlay" Fill="{TemplateBinding Background}" Opacity="0" />
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="ScrollBarThumbStyle" TargetType="Thumb">
 			<Grid>
 				<Rectangle Margin="6" RadiusX="3" RadiusY="3" Fill="{TemplateBinding Foreground}" />
 			</Grid>
@@ -625,6 +741,83 @@
             </Setter>
         </Style>
 
+        <Style x:Key="DelaySlider" TargetType="bc:MediaSlider">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="bc:MediaSlider">
+                        <Grid x:Name="Root">
+                            <vsm:VisualStateManager.VisualStateGroups>
+                                <vsm:VisualStateGroup x:Name="CommonStates">
+                                    <vsm:VisualState x:Name="Normal"/>
+                                    <vsm:VisualState x:Name="MouseOver"/>
+                                    <vsm:VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="HorizontalThumb"
+													Storyboard.TargetProperty="(UIElement.Opacity)"
+													To="0.5"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                            </vsm:VisualStateManager.VisualStateGroups>
+
+                            <Grid x:Name="HorizontalTemplate">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Track -->
+                                <Rectangle Grid.ColumnSpan="3" VerticalAlignment="Center"
+                                           StrokeThickness="0" Stroke="{x:Null}" 
+                                           Fill="{TemplateBinding Foreground}" 
+                                           Height="4" RadiusX="2" RadiusY="2" Margin="4,0,4,0" />
+
+                                <RepeatButton x:Name="HorizontalTrackLargeChangeDecreaseRepeatButton"
+											  Template="{StaticResource SliderRepeatButton}"
+											  IsTabStop="False" />
+                                <RepeatButton x:Name="HorizontalTrackLargeChangeIncreaseRepeatButton" Grid.Column="2"
+											  Template="{StaticResource SliderRepeatButton}"
+											  IsTabStop="False" />
+                                <Thumb x:Name="HorizontalThumb" Grid.Column="1" VerticalAlignment="Center"
+										Template="{StaticResource DelaySliderThumbStyle}" IsTabStop="True"
+										Background="{TemplateBinding Background}"
+										Foreground="{TemplateBinding Foreground}"
+									   SelectionForeground="{TemplateBinding SelectionForeground}" SelectionBackground="{TemplateBinding SelectionBackground}"
+									   FocusForeground="{TemplateBinding FocusForeground}" FocusBackground="{TemplateBinding FocusBackground}"
+									    />
+                            </Grid>
+
+                            <Grid x:Name="VerticalTemplate">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <!-- Track -->
+                                <Rectangle Grid.RowSpan="3" VerticalAlignment="Center"
+                                           StrokeThickness="{TemplateBinding BorderThickness}"
+                                           Stroke="{TemplateBinding BorderBrush}" 
+                                           Fill="{TemplateBinding Background}" 
+                                           Width="4" RadiusX="2" RadiusY="2" />
+
+                                <RepeatButton x:Name="VerticalLargeChangeDecreaseRepeatButton"
+											  Template="{StaticResource SliderRepeatButton}"
+											  IsTabStop="False" />
+                                <RepeatButton x:Name="VerticalLargeChangeIncreaseRepeatButton" Grid.Row="2"
+											  Template="{StaticResource SliderRepeatButton}"
+											  IsTabStop="False" />
+                                <Thumb x:Name="VerticalThumb" Grid.Row="1" VerticalAlignment="Center"
+										Template="{StaticResource DelaySliderThumbStyle}" IsTabStop="True"
+										Background="{TemplateBinding Background}"
+										Foreground="{TemplateBinding Foreground}" />
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>    
+                </Setter.Value>
+            </Setter>
+        </Style>
 
 		<Style x:Key="RescaleSlider" TargetType="bc:MediaSlider">
 			<Setter Property="Template">

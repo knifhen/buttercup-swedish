@@ -113,11 +113,16 @@
             </ToolTipService.ToolTip>
         </bc:MediaVolumeSlider>
         
-        <Slider Name="PlayerSpeed" Grid.Row="4" Grid.ColumnSpan="2" Minimum="0" Maximum="5">
+        <bc:MediaSlider x:Name="PlayerSpeed" Grid.Row="4" Grid.ColumnSpan="2" Minimum="0" Maximum="5"
+                Style="{StaticResource DelaySlider}"
+                Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}" BorderBrush="{Binding Path=DefaultForeground}"
+				SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
+				FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}"
+                >
             <ToolTipService.ToolTip>
                 <bc:ExtendedToolTip Content="Slide to adjust the delay for each line being read."></bc:ExtendedToolTip>
             </ToolTipService.ToolTip>
-        </Slider>
+        </bc:MediaSlider>
         
         <MediaElement x:Name="AudioPlayer" AutoPlay="False" />
     </Grid>
