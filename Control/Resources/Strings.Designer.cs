@@ -376,6 +376,15 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delay.
+        /// </summary>
+        public static string ToolTip_DelaySlider {
+            get {
+                return ResourceManager.GetString("ToolTip_DelaySlider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show Display Settings Panel.
         /// </summary>
         public static string ToolTip_DisplaySettings {

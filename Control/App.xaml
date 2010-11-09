@@ -5,9 +5,10 @@
              xmlns:bc="clr-namespace:Buttercup.Control"
              x:Class="Buttercup.Control.App"
              >
-    <Application.Resources>
-
-		<LinearGradientBrush x:Key="YellowGradientLR" StartPoint="0,0.5" EndPoint="1,0.5">
+    <Application.Resources>    
+        <local:LocalizedStrings xmlns:local="clr-namespace:Buttercup.Control" x:Key="LocalizedStrings" />
+        
+        <LinearGradientBrush x:Key="YellowGradientLR" StartPoint="0,0.5" EndPoint="1,0.5">
 			<LinearGradientBrush.GradientStops>
 				<GradientStop Color="#FF9900" Offset="0"/>
 				<GradientStop Color="#FFBF00" Offset="0.328042"/>

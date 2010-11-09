@@ -1,8 +1,9 @@
 ﻿<UserControl x:Class="Buttercup.Control.Player"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-    xmlns:bc="clr-namespace:Buttercup.Control">
-    
+    xmlns:bc="clr-namespace:Buttercup.Control"
+    >
+   
     <Grid x:Name="LayoutRoot" ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -119,7 +120,7 @@
 				SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 				FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
             <ToolTipService.ToolTip>
-                <bc:ExtendedToolTip Content="Slide to adjust the delay for each line being read."></bc:ExtendedToolTip>
+                <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_DelaySlider, Source={StaticResource LocalizedStrings}}" />
             </ToolTipService.ToolTip>
         </bc:MediaSlider>
         
