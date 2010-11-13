@@ -255,7 +255,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4243</DevelopmentServerPort>
+          <DevelopmentServerPort>8987</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://buttercup/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

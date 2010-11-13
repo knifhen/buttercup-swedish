@@ -61,7 +61,34 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add Bookmark Button.
+        ///   Looks up a localized string similar to The Online Digital Talking Book Reader (Demo).
+        /// </summary>
+        public static string Application_CatchPhrase {
+            get {
+                return ResourceManager.GetString("Application_CatchPhrase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buttercup Reader.
+        /// </summary>
+        public static string Application_Title {
+            get {
+                return ResourceManager.GetString("Application_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Website: http://www.buttercupreader.net.
+        /// </summary>
+        public static string Application_WebSite {
+            get {
+                return ResourceManager.GetString("Application_WebSite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bookmark your current position in the book.
         /// </summary>
         public static string AutomationHelp_AddBookmark {
             get {
@@ -79,7 +106,25 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Display Settings Button.
+        ///   Looks up a localized string similar to Change the buttercup contrast scheme using the Up and Down arrow keys..
+        /// </summary>
+        public static string AutomationHelp_ChangeContrast {
+            get {
+                return ResourceManager.GetString("AutomationHelp_ChangeContrast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change the size of the interface by clicking the button and using the slider, or directly via the keyboard shortcuts Shift+J and Shift+K..
+        /// </summary>
+        public static string AutomationHelp_ChangeSize {
+            get {
+                return ResourceManager.GetString("AutomationHelp_ChangeSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open the Display Settings Panel. Use this panel to change the scale and contrast scheme of the Buttercup reader..
         /// </summary>
         public static string AutomationHelp_DisplaySettings {
             get {
@@ -88,7 +133,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Find Button.
+        ///   Looks up a localized string similar to Open the Find Panel. Use this panel to go to a particular page or find specific text within the currently opened book..
         /// </summary>
         public static string AutomationHelp_Find {
             get {
@@ -97,7 +142,52 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hide Panel Button.
+        ///   Looks up a localized string similar to Press &apos;Enter&apos; to begin search.
+        /// </summary>
+        public static string AutomationHelp_Find_Activate {
+            get {
+                return ResourceManager.GetString("AutomationHelp_Find_Activate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type the text you would like to find in the book.
+        /// </summary>
+        public static string AutomationHelp_Find_Input {
+            get {
+                return ResourceManager.GetString("AutomationHelp_Find_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the page number you would like to go to.
+        /// </summary>
+        public static string AutomationHelp_GoToPage {
+            get {
+                return ResourceManager.GetString("AutomationHelp_GoToPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Press &apos;Enter&apos; to go to page.
+        /// </summary>
+        public static string AutomationHelp_GoToPage_Activate {
+            get {
+                return ResourceManager.GetString("AutomationHelp_GoToPage_Activate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open the Help panel. Here, you can get help on how to use the Buttercup reader..
+        /// </summary>
+        public static string AutomationHelp_Help {
+            get {
+                return ResourceManager.GetString("AutomationHelp_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hide the currently open panel.
         /// </summary>
         public static string AutomationHelp_HidePanel {
             get {
@@ -115,7 +205,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Navigation Button.
+        ///   Looks up a localized string similar to Open the Navigation Panel. View Book Information, Table of Contents and Bookmarks..
         /// </summary>
         public static string AutomationHelp_Navigation {
             get {
@@ -124,7 +214,25 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next Section Button.
+        ///   Looks up a localized string similar to Navigate through the Table of Contents using the Up and Down Arrow Keys..
+        /// </summary>
+        public static string AutomationHelp_Navigation_Content {
+            get {
+                return ResourceManager.GetString("AutomationHelp_Navigation_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switch between Book Information, Table of Contents and Bookmark views, use the Up and Down Arrow Keys to switch between them..
+        /// </summary>
+        public static string AutomationHelp_NavigationPanel {
+            get {
+                return ResourceManager.GetString("AutomationHelp_NavigationPanel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navigate to the Next Heading.
         /// </summary>
         public static string AutomationHelp_NextSection {
             get {
@@ -133,7 +241,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next Sentence Button.
+        ///   Looks up a localized string similar to Navigate to the Next Paragraph.
         /// </summary>
         public static string AutomationHelp_NextSentence {
             get {
@@ -142,7 +250,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open Book Button.
+        ///   Looks up a localized string similar to Open a Daisy book from your local computer.
         /// </summary>
         public static string AutomationHelp_OpenBook {
             get {
@@ -169,7 +277,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Previous Section Button.
+        ///   Looks up a localized string similar to Navigate to the Previous Heading.
         /// </summary>
         public static string AutomationHelp_PreviousSection {
             get {
@@ -178,7 +286,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Previous Sentence Button.
+        ///   Looks up a localized string similar to Navigate to the Previous Paragraph.
         /// </summary>
         public static string AutomationHelp_PreviousSentence {
             get {
@@ -187,7 +295,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to VolumeSlider.
+        ///   Looks up a localized string similar to Slide to Adjust Volume.
         /// </summary>
         public static string AutomationHelp_VolumeSlider {
             get {
@@ -205,11 +313,74 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Book Information.
+        ///   Looks up a localized string similar to Show Book Info.
         /// </summary>
         public static string AutomationName_BookInfo {
             get {
                 return ResourceManager.GetString("AutomationName_BookInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear Search TextBox.
+        /// </summary>
+        public static string AutomationName_ClearText {
+            get {
+                return ResourceManager.GetString("AutomationName_ClearText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close Panel.
+        /// </summary>
+        public static string AutomationName_ClosePanel {
+            get {
+                return ResourceManager.GetString("AutomationName_ClosePanel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contrast.
+        /// </summary>
+        public static string AutomationName_Contrast {
+            get {
+                return ResourceManager.GetString("AutomationName_Contrast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contrast: Black Text on White Background.
+        /// </summary>
+        public static string AutomationName_Contrast_BlackWhite {
+            get {
+                return ResourceManager.GetString("AutomationName_Contrast_BlackWhite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contrast: White Text on Blue Background.
+        /// </summary>
+        public static string AutomationName_Contrast_WhiteBlue {
+            get {
+                return ResourceManager.GetString("AutomationName_Contrast_WhiteBlue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contrast: Yellow Text on Black Background.
+        /// </summary>
+        public static string AutomationName_Contrast_YellowBlack {
+            get {
+                return ResourceManager.GetString("AutomationName_Contrast_YellowBlack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decrease Volume.
+        /// </summary>
+        public static string AutomationName_DecreaseVolume {
+            get {
+                return ResourceManager.GetString("AutomationName_DecreaseVolume", resourceCulture);
             }
         }
         
@@ -223,11 +394,38 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Find.
+        ///   Looks up a localized string similar to Find Text.
         /// </summary>
         public static string AutomationName_Find {
             get {
                 return ResourceManager.GetString("AutomationName_Find", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to First Heading.
+        /// </summary>
+        public static string AutomationName_FirstSection {
+            get {
+                return ResourceManager.GetString("AutomationName_FirstSection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to Page.
+        /// </summary>
+        public static string AutomationName_GoToPage {
+            get {
+                return ResourceManager.GetString("AutomationName_GoToPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Help.
+        /// </summary>
+        public static string AutomationName_Help {
+            get {
+                return ResourceManager.GetString("AutomationName_Help", resourceCulture);
             }
         }
         
@@ -250,7 +448,25 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Navigation.
+        ///   Looks up a localized string similar to Increase Volume.
+        /// </summary>
+        public static string AutomationName_IncreaseVolume {
+            get {
+                return ResourceManager.GetString("AutomationName_IncreaseVolume", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to Last Heading.
+        /// </summary>
+        public static string AutomationName_LastSection {
+            get {
+                return ResourceManager.GetString("AutomationName_LastSection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Navigation.
         /// </summary>
         public static string AutomationName_Navigation {
             get {
@@ -259,7 +475,43 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next Section.
+        ///   Looks up a localized string similar to Book Information.
+        /// </summary>
+        public static string AutomationName_Navigation_BookInformation {
+            get {
+                return ResourceManager.GetString("AutomationName_Navigation_BookInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bookmarks.
+        /// </summary>
+        public static string AutomationName_Navigation_Bookmark {
+            get {
+                return ResourceManager.GetString("AutomationName_Navigation_Bookmark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table of Contents.
+        /// </summary>
+        public static string AutomationName_Navigation_Content {
+            get {
+                return ResourceManager.GetString("AutomationName_Navigation_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to Next Page.
+        /// </summary>
+        public static string AutomationName_NextPage {
+            get {
+                return ResourceManager.GetString("AutomationName_NextPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to Next Header.
         /// </summary>
         public static string AutomationName_NextSection {
             get {
@@ -268,7 +520,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next Sentence.
+        ///   Looks up a localized string similar to Go to Next Phrase.
         /// </summary>
         public static string AutomationName_NextSentence {
             get {
@@ -304,7 +556,25 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Previous Section.
+        ///   Looks up a localized string similar to Play or Pause.
+        /// </summary>
+        public static string AutomationName_PlayPause {
+            get {
+                return ResourceManager.GetString("AutomationName_PlayPause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to Previous Page.
+        /// </summary>
+        public static string AutomationName_PreviousPage {
+            get {
+                return ResourceManager.GetString("AutomationName_PreviousPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to Previous Header.
         /// </summary>
         public static string AutomationName_PreviousSection {
             get {
@@ -313,11 +583,47 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Previous Sentence.
+        ///   Looks up a localized string similar to Go to Previous Phrase.
         /// </summary>
         public static string AutomationName_PreviousSentence {
             get {
                 return ResourceManager.GetString("AutomationName_PreviousSentence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Action.
+        /// </summary>
+        public static string AutomationName_StartAction {
+            get {
+                return ResourceManager.GetString("AutomationName_StartAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tab Backward.
+        /// </summary>
+        public static string AutomationName_TabBackward {
+            get {
+                return ResourceManager.GetString("AutomationName_TabBackward", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tab Forward.
+        /// </summary>
+        public static string AutomationName_TabForward {
+            get {
+                return ResourceManager.GetString("AutomationName_TabForward", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mute or Un-Mute.
+        /// </summary>
+        public static string AutomationName_ToggleMute {
+            get {
+                return ResourceManager.GetString("AutomationName_ToggleMute", resourceCulture);
             }
         }
         
@@ -327,6 +633,60 @@ namespace Buttercup.Control.Resources {
         public static string AutomationName_VolumeSlider {
             get {
                 return ResourceManager.GetString("AutomationName_VolumeSlider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zoom In.
+        /// </summary>
+        public static string AutomationName_ZoomIn {
+            get {
+                return ResourceManager.GetString("AutomationName_ZoomIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zoom out.
+        /// </summary>
+        public static string AutomationName_ZoomOut {
+            get {
+                return ResourceManager.GetString("AutomationName_ZoomOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Size.
+        /// </summary>
+        public static string ChangeSize {
+            get {
+                return ResourceManager.GetString("ChangeSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Black Text on White Background.
+        /// </summary>
+        public static string Contrast_BlackWhite {
+            get {
+                return ResourceManager.GetString("Contrast_BlackWhite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to White Text on Blue Background.
+        /// </summary>
+        public static string Contrast_WhiteBlue {
+            get {
+                return ResourceManager.GetString("Contrast_WhiteBlue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yellow Text on Black Background.
+        /// </summary>
+        public static string Contrast_YellowBlack {
+            get {
+                return ResourceManager.GetString("Contrast_YellowBlack", resourceCulture);
             }
         }
         
@@ -349,6 +709,33 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Get Started.
+        /// </summary>
+        public static string Main_GetStarted {
+            get {
+                return ResourceManager.GetString("Main_GetStarted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To open a DAISY DTB from your Hard Drive, press &apos;O&apos;..
+        /// </summary>
+        public static string Main_OpenFromHdd {
+            get {
+                return ResourceManager.GetString("Main_OpenFromHdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To open the ButtercupReader Help Guide, press &apos;Shift+?&apos;..
+        /// </summary>
+        public static string Main_OpenHelp {
+            get {
+                return ResourceManager.GetString("Main_OpenHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to [No book loaded].
         /// </summary>
         public static string NoBook_TitleMessage {
@@ -358,7 +745,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add Bookmark.
+        ///   Looks up a localized string similar to Bookmark your current position in the book.
         /// </summary>
         public static string ToolTip_AddBookmark {
             get {
@@ -376,7 +763,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delay.
+        ///   Looks up a localized string similar to Slide to adjust reading delay.
         /// </summary>
         public static string ToolTip_DelaySlider {
             get {
@@ -385,7 +772,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show Display Settings Panel.
+        ///   Looks up a localized string similar to Open the Display Settings Panel (D).
         /// </summary>
         public static string ToolTip_DisplaySettings {
             get {
@@ -394,7 +781,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show Find Panel.
+        ///   Looks up a localized string similar to Open the Find Panel (F).
         /// </summary>
         public static string ToolTip_Find {
             get {
@@ -403,7 +790,34 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hide Panel.
+        ///   Looks up a localized string similar to Search (F).
+        /// </summary>
+        public static string ToolTip_Find_Activate {
+            get {
+                return ResourceManager.GetString("ToolTip_Find_Activate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to Page (P).
+        /// </summary>
+        public static string ToolTip_GoToPage {
+            get {
+                return ResourceManager.GetString("ToolTip_GoToPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open the Help panel (Shift+?).
+        /// </summary>
+        public static string ToolTip_Help {
+            get {
+                return ResourceManager.GetString("ToolTip_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hide the currently open panel (Escape).
         /// </summary>
         public static string ToolTip_HidePanel {
             get {
@@ -421,7 +835,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show Navigation Panel.
+        ///   Looks up a localized string similar to Open the Navigation Panel (C).
         /// </summary>
         public static string ToolTip_Navigation {
             get {
@@ -430,7 +844,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next Section.
+        ///   Looks up a localized string similar to Navigate to the Next Heading (Down Arrow).
         /// </summary>
         public static string ToolTip_NextSection {
             get {
@@ -439,7 +853,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Next Sentence.
+        ///   Looks up a localized string similar to Navigate to the Next Paragraph (Right Arrow).
         /// </summary>
         public static string ToolTip_NextSentence {
             get {
@@ -448,7 +862,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open Book.
+        ///   Looks up a localized string similar to Open a local Daisy book on your computer (O).
         /// </summary>
         public static string ToolTip_OpenBook {
             get {
@@ -475,7 +889,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Previous Section.
+        ///   Looks up a localized string similar to Navigate to the Previous Heading (Up Arrow).
         /// </summary>
         public static string ToolTip_PreviousSection {
             get {
@@ -484,7 +898,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Previous Sentence.
+        ///   Looks up a localized string similar to Navigate to the Previous Paragraph (Left Arrow).
         /// </summary>
         public static string ToolTip_PreviousSentence {
             get {
@@ -493,7 +907,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Volume.
+        ///   Looks up a localized string similar to Slide to Adjust Volume (J to decrease, K to increase).
         /// </summary>
         public static string ToolTip_VolumeSlider {
             get {

@@ -46,35 +46,35 @@
                     <TextBlock Text="Numpad -"></TextBlock>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Margin="6,0,0,0" >
-                    <TextBlock Text="Open Dialog"></TextBlock>
-                    <TextBlock Text="Show Content" TextWrapping="Wrap"></TextBlock>
-                    <TextBlock Text="Show Book Info"></TextBlock>
-                    <TextBlock Text="Show Help"></TextBlock>
-                    <TextBlock Text="Play or Pause"></TextBlock>
-                    <TextBlock Text="Go to First Heading"></TextBlock>
-                    <TextBlock Text="Go to Last Heading"></TextBlock>
-                    <TextBlock Text="Go to Previous Page"></TextBlock>
-                    <TextBlock Text="Go to Next Page"></TextBlock>
-                    <TextBlock Text="Go to Previous Header"></TextBlock>
-                    <TextBlock Text="Go to Next Header"></TextBlock>
-                    <TextBlock Text="Go to Previous Phrase"></TextBlock>
-                    <TextBlock Text="Go to Next Phrase"></TextBlock>
-                    <TextBlock Text="Increase Volume"></TextBlock>
-                    <TextBlock Text="Decrease Volume"></TextBlock>
-                    <TextBlock Text="Mute or Un-Mute"></TextBlock>
-                    <TextBlock Text="Find Text"></TextBlock>
-                    <TextBlock Text="Go To Page"></TextBlock>
-                    <TextBlock Text="Increase Content Size"></TextBlock>
-                    <TextBlock Text="Decrease Content Size"></TextBlock>
-                    <TextBlock Text="Contrast"></TextBlock>
-                    <TextBlock Text="Close Panel"></TextBlock>
-                    <TextBlock Text="Tab Forward"></TextBlock>
-                    <TextBlock Text="Tab Backwards"></TextBlock>
-                    <TextBlock Text="Start Action"></TextBlock>
-                    <TextBlock Text="Clear Search Textbox"></TextBlock>
-                    <TextBlock Text="Toggle Self Voicing"></TextBlock>
-                    <TextBlock Text="Speak Help Text"></TextBlock>
-                    <TextBlock Text="Stop Self Voice"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_OpenBook, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_Navigation, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_BookInfo, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_Help, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_PlayPause, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_FirstSection, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_LastSection, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_PreviousPage, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_NextPage, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_PreviousSection, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_NextSection, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_PreviousSentence, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_NextSentence, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_IncreaseVolume, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_DecreaseVolume, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_ToggleMute, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_Find, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_GoToPage, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_IncreaseSize, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_DecreaseSize, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_Contrast, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_ClosePanel, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_TabForward, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_TabBackward, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_StartAction, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_ClearText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_ToggleSelfVoicing, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_SpeakHelpText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBlock Text="{Binding Path=StringLibrary.AutomationName_StopSelfVoicing, Source={StaticResource LocalizedStrings}}"></TextBlock>
                 </StackPanel>
             </Grid>
         </Border> 

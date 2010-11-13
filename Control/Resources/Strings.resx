@@ -117,35 +117,71 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Application_CatchPhrase" xml:space="preserve">
+    <value>The Online Digital Talking Book Reader (Demo)</value>
+  </data>
+  <data name="Application_Title" xml:space="preserve">
+    <value>Buttercup Reader</value>
+  </data>
+  <data name="Application_WebSite" xml:space="preserve">
+    <value>Website: http://www.buttercupreader.net</value>
+  </data>
   <data name="AutomationHelp_AddBookmark" xml:space="preserve">
-    <value>Add Bookmark Button</value>
+    <value>Bookmark your current position in the book</value>
   </data>
   <data name="AutomationHelp_BookInfo" xml:space="preserve">
     <value>Book Information Button</value>
   </data>
+  <data name="AutomationHelp_ChangeContrast" xml:space="preserve">
+    <value>Change the buttercup contrast scheme using the Up and Down arrow keys.</value>
+  </data>
+  <data name="AutomationHelp_ChangeSize" xml:space="preserve">
+    <value>Change the size of the interface by clicking the button and using the slider, or directly via the keyboard shortcuts Shift+J and Shift+K.</value>
+  </data>
   <data name="AutomationHelp_DisplaySettings" xml:space="preserve">
-    <value>Display Settings Button</value>
+    <value>Open the Display Settings Panel. Use this panel to change the scale and contrast scheme of the Buttercup reader.</value>
   </data>
   <data name="AutomationHelp_Find" xml:space="preserve">
-    <value>Find Button</value>
+    <value>Open the Find Panel. Use this panel to go to a particular page or find specific text within the currently opened book.</value>
+  </data>
+  <data name="AutomationHelp_Find_Activate" xml:space="preserve">
+    <value>Press 'Enter' to begin search</value>
+  </data>
+  <data name="AutomationHelp_Find_Input" xml:space="preserve">
+    <value>Type the text you would like to find in the book</value>
+  </data>
+  <data name="AutomationHelp_GoToPage" xml:space="preserve">
+    <value>Enter the page number you would like to go to</value>
+  </data>
+  <data name="AutomationHelp_GoToPage_Activate" xml:space="preserve">
+    <value>Press 'Enter' to go to page</value>
+  </data>
+  <data name="AutomationHelp_Help" xml:space="preserve">
+    <value>Open the Help panel. Here, you can get help on how to use the Buttercup reader.</value>
   </data>
   <data name="AutomationHelp_HidePanel" xml:space="preserve">
-    <value>Hide Panel Button</value>
+    <value>Hide the currently open panel</value>
   </data>
   <data name="AutomationHelp_IncreaseIS" xml:space="preserve">
     <value>Increase Storage Button</value>
   </data>
   <data name="AutomationHelp_Navigation" xml:space="preserve">
-    <value>Navigation Button</value>
+    <value>Open the Navigation Panel. View Book Information, Table of Contents and Bookmarks.</value>
+  </data>
+  <data name="AutomationHelp_NavigationPanel" xml:space="preserve">
+    <value>Switch between Book Information, Table of Contents and Bookmark views, use the Up and Down Arrow Keys to switch between them.</value>
+  </data>
+  <data name="AutomationHelp_Navigation_Content" xml:space="preserve">
+    <value>Navigate through the Table of Contents using the Up and Down Arrow Keys.</value>
   </data>
   <data name="AutomationHelp_NextSection" xml:space="preserve">
-    <value>Next Section Button</value>
+    <value>Navigate to the Next Heading</value>
   </data>
   <data name="AutomationHelp_NextSentence" xml:space="preserve">
-    <value>Next Sentence Button</value>
+    <value>Navigate to the Next Paragraph</value>
   </data>
   <data name="AutomationHelp_OpenBook" xml:space="preserve">
-    <value>Open Book Button</value>
+    <value>Open a Daisy book from your local computer</value>
   </data>
   <data name="AutomationHelp_Pause" xml:space="preserve">
     <value>Pause playback of the current book</value>
@@ -154,25 +190,55 @@
     <value>Start playback of the current book</value>
   </data>
   <data name="AutomationHelp_PreviousSection" xml:space="preserve">
-    <value>Previous Section Button</value>
+    <value>Navigate to the Previous Heading</value>
   </data>
   <data name="AutomationHelp_PreviousSentence" xml:space="preserve">
-    <value>Previous Sentence Button</value>
+    <value>Navigate to the Previous Paragraph</value>
   </data>
   <data name="AutomationHelp_VolumeSlider" xml:space="preserve">
-    <value>VolumeSlider</value>
+    <value>Slide to Adjust Volume</value>
   </data>
   <data name="AutomationName_AddBookmark" xml:space="preserve">
     <value>Add Bookmark</value>
   </data>
   <data name="AutomationName_BookInfo" xml:space="preserve">
-    <value>Book Information</value>
+    <value>Show Book Info</value>
+  </data>
+  <data name="AutomationName_ClearText" xml:space="preserve">
+    <value>Clear Search TextBox</value>
+  </data>
+  <data name="AutomationName_ClosePanel" xml:space="preserve">
+    <value>Close Panel</value>
+  </data>
+  <data name="AutomationName_Contrast" xml:space="preserve">
+    <value>Contrast</value>
+  </data>
+  <data name="AutomationName_Contrast_BlackWhite" xml:space="preserve">
+    <value>Contrast: Black Text on White Background</value>
+  </data>
+  <data name="AutomationName_Contrast_WhiteBlue" xml:space="preserve">
+    <value>Contrast: White Text on Blue Background</value>
+  </data>
+  <data name="AutomationName_Contrast_YellowBlack" xml:space="preserve">
+    <value>Contrast: Yellow Text on Black Background</value>
+  </data>
+  <data name="AutomationName_DecreaseVolume" xml:space="preserve">
+    <value>Decrease Volume</value>
   </data>
   <data name="AutomationName_DisplaySettings" xml:space="preserve">
     <value>Display Settings</value>
   </data>
   <data name="AutomationName_Find" xml:space="preserve">
-    <value>Find</value>
+    <value>Find Text</value>
+  </data>
+  <data name="AutomationName_FirstSection" xml:space="preserve">
+    <value>Go to First Heading</value>
+  </data>
+  <data name="AutomationName_GoToPage" xml:space="preserve">
+    <value>Go to Page</value>
+  </data>
+  <data name="AutomationName_Help" xml:space="preserve">
+    <value>Show Help</value>
   </data>
   <data name="AutomationName_HidePanel" xml:space="preserve">
     <value>Hide Panel</value>
@@ -180,14 +246,32 @@
   <data name="AutomationName_IncreaseIS" xml:space="preserve">
     <value>Increase Storage</value>
   </data>
+  <data name="AutomationName_IncreaseVolume" xml:space="preserve">
+    <value>Increase Volume</value>
+  </data>
+  <data name="AutomationName_LastSection" xml:space="preserve">
+    <value>Go to Last Heading</value>
+  </data>
   <data name="AutomationName_Navigation" xml:space="preserve">
-    <value>Navigation</value>
+    <value>Open Navigation</value>
+  </data>
+  <data name="AutomationName_Navigation_BookInformation" xml:space="preserve">
+    <value>Book Information</value>
+  </data>
+  <data name="AutomationName_Navigation_Bookmark" xml:space="preserve">
+    <value>Bookmarks</value>
+  </data>
+  <data name="AutomationName_Navigation_Content" xml:space="preserve">
+    <value>Table of Contents</value>
+  </data>
+  <data name="AutomationName_NextPage" xml:space="preserve">
+    <value>Go to Next Page</value>
   </data>
   <data name="AutomationName_NextSection" xml:space="preserve">
-    <value>Next Section</value>
+    <value>Go to Next Header</value>
   </data>
   <data name="AutomationName_NextSentence" xml:space="preserve">
-    <value>Next Sentence</value>
+    <value>Go to Next Phrase</value>
   </data>
   <data name="AutomationName_OpenBook" xml:space="preserve">
     <value>Open Book</value>
@@ -198,14 +282,50 @@
   <data name="AutomationName_Play" xml:space="preserve">
     <value>Play Book</value>
   </data>
+  <data name="AutomationName_PlayPause" xml:space="preserve">
+    <value>Play or Pause</value>
+  </data>
+  <data name="AutomationName_PreviousPage" xml:space="preserve">
+    <value>Go to Previous Page</value>
+  </data>
   <data name="AutomationName_PreviousSection" xml:space="preserve">
-    <value>Previous Section</value>
+    <value>Go to Previous Header</value>
   </data>
   <data name="AutomationName_PreviousSentence" xml:space="preserve">
-    <value>Previous Sentence</value>
+    <value>Go to Previous Phrase</value>
+  </data>
+  <data name="AutomationName_StartAction" xml:space="preserve">
+    <value>Start Action</value>
+  </data>
+  <data name="AutomationName_TabBackward" xml:space="preserve">
+    <value>Tab Backward</value>
+  </data>
+  <data name="AutomationName_TabForward" xml:space="preserve">
+    <value>Tab Forward</value>
+  </data>
+  <data name="AutomationName_ToggleMute" xml:space="preserve">
+    <value>Mute or Un-Mute</value>
   </data>
   <data name="AutomationName_VolumeSlider" xml:space="preserve">
     <value>Volume</value>
+  </data>
+  <data name="AutomationName_ZoomIn" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="AutomationName_ZoomOut" xml:space="preserve">
+    <value>Zoom out</value>
+  </data>
+  <data name="ChangeSize" xml:space="preserve">
+    <value>Change Size</value>
+  </data>
+  <data name="Contrast_BlackWhite" xml:space="preserve">
+    <value>Black Text on White Background</value>
+  </data>
+  <data name="Contrast_WhiteBlue" xml:space="preserve">
+    <value>White Text on Blue Background</value>
+  </data>
+  <data name="Contrast_YellowBlack" xml:space="preserve">
+    <value>Yellow Text on Black Background</value>
   </data>
   <data name="FileOpenDialogFilter" xml:space="preserve">
     <value>Text Files (*.zip)|*.zip</value>
@@ -213,41 +333,59 @@
   <data name="ListItemStyleKey" xml:space="preserve">
     <value>defaultListItem</value>
   </data>
+  <data name="Main_GetStarted" xml:space="preserve">
+    <value>Get Started</value>
+  </data>
+  <data name="Main_OpenFromHdd" xml:space="preserve">
+    <value>To open a DAISY DTB from your Hard Drive, press 'O'.</value>
+  </data>
+  <data name="Main_OpenHelp" xml:space="preserve">
+    <value>To open the ButtercupReader Help Guide, press 'Shift+?'.</value>
+  </data>
   <data name="NoBook_TitleMessage" xml:space="preserve">
     <value>[No book loaded]</value>
   </data>
   <data name="ToolTip_AddBookmark" xml:space="preserve">
-    <value>Add Bookmark</value>
+    <value>Bookmark your current position in the book</value>
   </data>
   <data name="ToolTip_BookInfo" xml:space="preserve">
     <value>Show Book Information Panel</value>
   </data>
   <data name="ToolTip_DelaySlider" xml:space="preserve">
-    <value>Delay</value>
+    <value>Slide to adjust reading delay</value>
   </data>
   <data name="ToolTip_DisplaySettings" xml:space="preserve">
-    <value>Show Display Settings Panel</value>
+    <value>Open the Display Settings Panel (D)</value>
   </data>
   <data name="ToolTip_Find" xml:space="preserve">
-    <value>Show Find Panel</value>
+    <value>Open the Find Panel (F)</value>
+  </data>
+  <data name="ToolTip_Find_Activate" xml:space="preserve">
+    <value>Search (F)</value>
+  </data>
+  <data name="ToolTip_GoToPage" xml:space="preserve">
+    <value>Go to Page (P)</value>
+  </data>
+  <data name="ToolTip_Help" xml:space="preserve">
+    <value>Open the Help panel (Shift+?)</value>
   </data>
   <data name="ToolTip_HidePanel" xml:space="preserve">
-    <value>Hide Panel</value>
+    <value>Hide the currently open panel (Escape)</value>
   </data>
   <data name="ToolTip_IncreaseIS" xml:space="preserve">
     <value>Increase Isolated Storage</value>
   </data>
   <data name="ToolTip_Navigation" xml:space="preserve">
-    <value>Show Navigation Panel</value>
+    <value>Open the Navigation Panel (C)</value>
   </data>
   <data name="ToolTip_NextSection" xml:space="preserve">
-    <value>Next Section</value>
+    <value>Navigate to the Next Heading (Down Arrow)</value>
   </data>
   <data name="ToolTip_NextSentence" xml:space="preserve">
-    <value>Next Sentence</value>
+    <value>Navigate to the Next Paragraph (Right Arrow)</value>
   </data>
   <data name="ToolTip_OpenBook" xml:space="preserve">
-    <value>Open Book</value>
+    <value>Open a local Daisy book on your computer (O)</value>
   </data>
   <data name="ToolTip_Pause" xml:space="preserve">
     <value>Pause Book</value>
@@ -256,13 +394,13 @@
     <value>Play Book</value>
   </data>
   <data name="ToolTip_PreviousSection" xml:space="preserve">
-    <value>Previous Section</value>
+    <value>Navigate to the Previous Heading (Up Arrow)</value>
   </data>
   <data name="ToolTip_PreviousSentence" xml:space="preserve">
-    <value>Previous Sentence</value>
+    <value>Navigate to the Previous Paragraph (Left Arrow)</value>
   </data>
   <data name="ToolTip_VolumeSlider" xml:space="preserve">
-    <value>Volume</value>
+    <value>Slide to Adjust Volume (J to decrease, K to increase)</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>Welcome to Buttercup!</value>

@@ -23,8 +23,8 @@
 					Foreground="{Binding Path=DefaultForeground}"
                     GotFocus="SpeakControlOnFocus"
                     AutomationProperties.AcceleratorKey="C"
-                    AutomationProperties.Name="Table of Contents"
-                    AutomationProperties.HelpText="Switch between Book Information, Table of Contents and Bookmark views, use the Up and Down Arrow Keys to switch between them.">
+                    AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Navigation_Content, Source={StaticResource LocalizedStrings}}"
+                    AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_NavigationPanel, Source={StaticResource LocalizedStrings}}">
                 <TextBlock Name="contentsLabel">
                     <Run TextDecorations="Underline">C</Run><Run>ontents</Run>
                 </TextBlock>
@@ -34,8 +34,8 @@
 					Foreground="{Binding Path=DefaultForeground}"
                     GotFocus="SpeakControlOnFocus"
                     AutomationProperties.AcceleratorKey="B"
-                    AutomationProperties.Name="Bookmarks"
-                    AutomationProperties.HelpText="Switch between Book Information, Table of Contents and Bookmark views, use the Up and Down Arrow Keys to switch between them.">
+                    AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Navigation_Bookmark, Source={StaticResource LocalizedStrings}}"
+                    AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_NavigationPanel, Source={StaticResource LocalizedStrings}}">
                 <TextBlock Name="bookmarksLabel">
                     <Run TextDecorations="Underline">B</Run><Run>ookmarks</Run>
                 </TextBlock>
@@ -45,8 +45,8 @@
 					Foreground="{Binding Path=DefaultForeground}"
                     GotFocus="SpeakControlOnFocus"
                     AutomationProperties.AcceleratorKey="I"
-                    AutomationProperties.Name="Book Information"
-                    AutomationProperties.HelpText="Switch between Book Information, Table of Contents and Bookmark views, use the Up and Down Arrow Keys to switch between them.">
+                    AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Navigation_BookInformation, Source={StaticResource LocalizedStrings}}"
+                    AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_NavigationPanel, Source={StaticResource LocalizedStrings}}">
                 <TextBlock Name="bookInfoLabel">
                     <Run>Book</Run>
                     <Run TextDecorations="Underline">I</Run><Run>nformation</Run>
@@ -61,7 +61,8 @@
 						BorderBrush="{Binding Path=DefaultForeground}" Background="{x:Null}"
 						SelectionChanged="TableOfContentsListBox_SelectionChanged"
 						GotFocus="ListBoxGotFocus" LostFocus="ListBoxLostFocus"
-                        AutomationProperties.Name="Table of Contents" AutomationProperties.HelpText="Navigate through the Table of Contents using the Up and Down Arrow Keys." />
+                        AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Navigation_Content, Source={StaticResource LocalizedStrings}}" 
+                        AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_Navigation_Content, Source={StaticResource LocalizedStrings}}" />
             </basics:TabItem>
 
 			<basics:TabItem Header="Bookmarks" Style="{StaticResource SubPanelItem}">

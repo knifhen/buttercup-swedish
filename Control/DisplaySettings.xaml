@@ -8,14 +8,14 @@
 		<StackPanel>
 			<bc:MediaButton x:Name="changeSizeButton" Style="{StaticResource DefaultButton}"
 					Click="changeSizeButton_Click" MinHeight="32"
-                    AutomationProperties.Name="Change Size"
+                    AutomationProperties.Name="{Binding Path=StringLibrary.ChangeSize, Source={StaticResource LocalizedStrings}}"
 					GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 					MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-                    AutomationProperties.HelpText="Change the size of the interface by clicking the button and using the slider, or directly via the keyboard shortcuts Shift+J and Shift+K."
+                    AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_ChangeSize, Source={StaticResource LocalizedStrings}}"
 					Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 					SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 					FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
-				<TextBlock Text="Change Size" FontSize="32" Foreground="{Binding Path=DefaultForeground}"/>
+                <TextBlock Text="{Binding Path=StringLibrary.ChangeSize, Source={StaticResource LocalizedStrings}}" FontSize="32" Foreground="{Binding Path=DefaultForeground}"/>
 			</bc:MediaButton>
 						
             <TextBlock Text="Contrast Scheme:" />
@@ -28,33 +28,33 @@
                 <bc:ExtendedListBoxItem x:Name="contrastBlackonWhite" Style="{StaticResource tickListItem}" Tag="BlackTextOnWhite"
 						Background="{Binding Path=DefaultBackground}"
 						Foreground="{Binding Path=DefaultForeground}"
-                        AutomationProperties.Name="Contrast: Black Text on White Background"
-						AutomationProperties.HelpText="Change the buttercup contrast scheme using the Up and Down arrow keys."
+                        AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Contrast_BlackWhite, Source={StaticResource LocalizedStrings}}"
+						AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_ChangeContrast, Source={StaticResource LocalizedStrings}}"
 						GotFocus="SpeakContrastSchemesOnFocus">
                     <Border Background="#ffffff" Padding="4,2,4,2" >
-						<TextBlock TextWrapping="Wrap" Text="Black Text on White Background"
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=StringLibrary.Contrast_BlackWhite, Source={StaticResource LocalizedStrings}}"
 								Foreground="#000000" />
 					</Border>
                 </bc:ExtendedListBoxItem>
                 <bc:ExtendedListBoxItem x:Name="contrastWhiteonBlue" Style="{StaticResource tickListItem}" Tag="WhiteTextOnBlue"
 						Background="{Binding Path=DefaultBackground}"
 						Foreground="{Binding Path=DefaultForeground}"
-                        AutomationProperties.Name="Contrast: White Text on Blue Background"
-                        AutomationProperties.HelpText="Change the buttercup contrast scheme using the Up and Down arrow keys."
+                        AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Contrast_WhiteBlue, Source={StaticResource LocalizedStrings}}"
+                        AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_ChangeContrast, Source={StaticResource LocalizedStrings}}"
 						GotFocus="SpeakContrastSchemesOnFocus">
                     <Border Background="#000f5f" Padding="4,2,4,2">
-                        <TextBlock TextWrapping="Wrap" Text="White Text on Blue Background"
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=StringLibrary.Contrast_WhiteBlue, Source={StaticResource LocalizedStrings}}"
 								Foreground="#ffffff"/>
                     </Border>
                 </bc:ExtendedListBoxItem>
                 <bc:ExtendedListBoxItem x:Name="contrastYellowonBlack" Style="{StaticResource tickListItem}" Tag="YellowTextOnBlack"
 						Background="{Binding Path=DefaultBackground}"
 						Foreground="{Binding Path=DefaultForeground}"
-                        AutomationProperties.Name="Contrast: Yellow Text on Black Background"
-						AutomationProperties.HelpText="Change the buttercup contrast scheme using the Up and Down arrow keys."
+                        AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Contrast_YellowBlack, Source={StaticResource LocalizedStrings}}"
+						AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_ChangeContrast, Source={StaticResource LocalizedStrings}}"
 						GotFocus="SpeakContrastSchemesOnFocus">
 					<Border Background="#000000" Padding="4,2,4,2">
-						<TextBlock TextWrapping="Wrap" Text="Yellow Text on Black Background"
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=StringLibrary.Contrast_YellowBlack, Source={StaticResource LocalizedStrings}}"
 								Foreground="#ffbf00" />
 					</Border>
                 </bc:ExtendedListBoxItem>
