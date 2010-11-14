@@ -383,6 +383,7 @@
   </data>
   <data name="ListItemStyleKey" xml:space="preserve">
     <value>defaultListItem</value>
+    <comment>Not displayed to any user</comment>
   </data>
   <data name="Main_GetStarted" xml:space="preserve">
     <value>Get Started</value>
