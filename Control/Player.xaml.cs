@@ -73,7 +73,7 @@ namespace Buttercup.Control
 			playPauseButton.Content = _playIcon;
 			AutomationProperties.SetHelpText(playPauseButton, Strings.AutomationHelp_Play);
 			AutomationProperties.SetName(playPauseButton, Strings.AutomationName_Play);
-			toolTipPlayPauseButton.Content = Strings.ToolTip_Play + " (Spacebar)";
+			toolTipPlayPauseButton.Content = Strings.ToolTip_Play + " ("+ Strings.AutomationKey_Spacebar + ")";
 			//ToolTipService.SetToolTip(playPauseButton, Strings.ToolTip_Play);
 
 			VolumeSlider.ValueChanged += VolumeSlider_VolumeChanged;
@@ -323,14 +323,14 @@ namespace Buttercup.Control
 			                       		playPauseButton.Content = _playIcon;
 			                       		AutomationProperties.SetHelpText(playPauseButton, Strings.AutomationHelp_Play);
 			                       		AutomationProperties.SetName(playPauseButton, Strings.AutomationName_Play);
-			                       		toolTipPlayPauseButton.Content = Strings.ToolTip_Play + " (Spacebar)";
+			                       		toolTipPlayPauseButton.Content = Strings.ToolTip_Play + " (" + Strings.AutomationKey_Spacebar + ")";
 			                       	}
 			                       	else
 			                       	{
 			                       		playPauseButton.Content = _pauseIcon;
 			                       		AutomationProperties.SetHelpText(playPauseButton, Strings.AutomationHelp_Pause);
 			                       		AutomationProperties.SetName(playPauseButton, Strings.AutomationName_Pause);
-			                       		toolTipPlayPauseButton.Content = Strings.ToolTip_Pause + " (Spacebar)";
+                                        toolTipPlayPauseButton.Content = Strings.ToolTip_Pause + " (" + Strings.AutomationKey_Spacebar + ")";
 			                       	}
 
 			                       	if(playPauseButton.IsMouseOver)

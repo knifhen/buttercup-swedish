@@ -26,7 +26,7 @@
 				SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 				FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
             <ToolTipService.ToolTip>
-                <bc:ExtendedToolTip x:Name="toolTipPlayPauseButton"></bc:ExtendedToolTip>
+                <bc:ExtendedToolTip x:Name="toolTipPlayPauseButton" />
             </ToolTipService.ToolTip>
         </bc:MediaButton>
         
@@ -35,13 +35,14 @@
                 Click="PrevSectionButton_Click"
 				GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 				MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-				AutomationProperties.Name="Previous Heading" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_PreviousSection, Source={StaticResource LocalizedStrings}}"
+				AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_PreviousSection, Source={StaticResource LocalizedStrings}}" 
+                AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_PreviousSection, Source={StaticResource LocalizedStrings}}"
                 AutomationProperties.AcceleratorKey="Up Arrow"
 				Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 				SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 				FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
             <ToolTipService.ToolTip>
-                <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_PreviousSection, Source={StaticResource LocalizedStrings}}"></bc:ExtendedToolTip>
+                <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_PreviousSection, Source={StaticResource LocalizedStrings}}" />
             </ToolTipService.ToolTip>
 			<bc:MediaButton.RenderTransform>
 				<TransformGroup>
@@ -54,7 +55,8 @@
                 Grid.Row="1" Grid.Column="1"
                 Click="NextSectionButton_Click" GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 				MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-				AutomationProperties.Name="Next Heading" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_NextSection, Source={StaticResource LocalizedStrings}}"
+				AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_NextSection, Source={StaticResource LocalizedStrings}}" 
+                AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_NextSection, Source={StaticResource LocalizedStrings}}"
                 AutomationProperties.AcceleratorKey="Down Arrow"
 				Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 				SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
@@ -74,7 +76,8 @@
                 Grid.Row="2" Grid.Column="0"
                 Click="PrevSentenceButton_Click" GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 				MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-				AutomationProperties.Name="Previous Paragraph" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_PreviousSentence, Source={StaticResource LocalizedStrings}}"
+				AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_PreviousSentence, Source={StaticResource LocalizedStrings}}" 
+                AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_PreviousSentence, Source={StaticResource LocalizedStrings}}"
                 AutomationProperties.AcceleratorKey="Left Arrow"
 				Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 				SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
@@ -88,7 +91,8 @@
                 Grid.Row="2" Grid.Column="1"
                 Click="NextSentenceButton_Click" GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 				MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-				AutomationProperties.Name="Next Paragraph" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_NextSentence, Source={StaticResource LocalizedStrings}}"
+				AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_NextSentence, Source={StaticResource LocalizedStrings}}" 
+                AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_NextSentence, Source={StaticResource LocalizedStrings}}"
                 AutomationProperties.AcceleratorKey="Right Arrow"
 				Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 				SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
@@ -106,7 +110,8 @@
 				Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}" BorderBrush="{Binding Path=DefaultForeground}"
 				SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 				FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}"
-			    AutomationProperties.Name="Volume" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_VolumeSlider, Source={StaticResource LocalizedStrings}}"
+			    AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_VolumeSlider, Source={StaticResource LocalizedStrings}}" 
+                AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_VolumeSlider, Source={StaticResource LocalizedStrings}}"
                 AutomationProperties.AcceleratorKey="J to decrease, K to increase.">
             <ToolTipService.ToolTip>
                 <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_VolumeSlider, Source={StaticResource LocalizedStrings}}"></bc:ExtendedToolTip>

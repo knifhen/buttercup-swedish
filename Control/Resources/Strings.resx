@@ -198,6 +198,9 @@
   <data name="AutomationHelp_VolumeSlider" xml:space="preserve">
     <value>Slide to Adjust Volume</value>
   </data>
+  <data name="AutomationKey_Spacebar" xml:space="preserve">
+    <value>Spacebar</value>
+  </data>
   <data name="AutomationName_AddBookmark" xml:space="preserve">
     <value>Add Bookmark</value>
   </data>
@@ -222,6 +225,9 @@
   <data name="AutomationName_Contrast_YellowBlack" xml:space="preserve">
     <value>Contrast: Yellow Text on Black Background</value>
   </data>
+  <data name="AutomationName_DecreaseSize" xml:space="preserve">
+    <value>Decrease content size</value>
+  </data>
   <data name="AutomationName_DecreaseVolume" xml:space="preserve">
     <value>Decrease Volume</value>
   </data>
@@ -245,6 +251,9 @@
   </data>
   <data name="AutomationName_IncreaseIS" xml:space="preserve">
     <value>Increase Storage</value>
+  </data>
+  <data name="AutomationName_IncreaseSize" xml:space="preserve">
+    <value>Increase content size</value>
   </data>
   <data name="AutomationName_IncreaseVolume" xml:space="preserve">
     <value>Increase Volume</value>
@@ -289,13 +298,19 @@
     <value>Go to Previous Page</value>
   </data>
   <data name="AutomationName_PreviousSection" xml:space="preserve">
-    <value>Go to Previous Header</value>
+    <value>Go to Previous Heading</value>
   </data>
   <data name="AutomationName_PreviousSentence" xml:space="preserve">
     <value>Go to Previous Phrase</value>
   </data>
+  <data name="AutomationName_SpeakHelpText" xml:space="preserve">
+    <value>Speak help text</value>
+  </data>
   <data name="AutomationName_StartAction" xml:space="preserve">
     <value>Start Action</value>
+  </data>
+  <data name="AutomationName_StopSelfVoicing" xml:space="preserve">
+    <value>Stop self voice</value>
   </data>
   <data name="AutomationName_TabBackward" xml:space="preserve">
     <value>Tab Backward</value>
@@ -305,6 +320,9 @@
   </data>
   <data name="AutomationName_ToggleMute" xml:space="preserve">
     <value>Mute or Un-Mute</value>
+  </data>
+  <data name="AutomationName_ToggleSelfVoicing" xml:space="preserve">
+    <value>Toggle self voicing</value>
   </data>
   <data name="AutomationName_VolumeSlider" xml:space="preserve">
     <value>Volume</value>
@@ -344,6 +362,7 @@
   </data>
   <data name="NoBook_TitleMessage" xml:space="preserve">
     <value>[No book loaded]</value>
+    <comment>Not used</comment>
   </data>
   <data name="ToolTip_AddBookmark" xml:space="preserve">
     <value>Bookmark your current position in the book</value>

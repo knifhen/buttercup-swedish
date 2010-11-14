@@ -304,6 +304,15 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spacebar.
+        /// </summary>
+        public static string AutomationKey_Spacebar {
+            get {
+                return ResourceManager.GetString("AutomationKey_Spacebar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add Bookmark.
         /// </summary>
         public static string AutomationName_AddBookmark {
@@ -376,6 +385,15 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Decrease content size.
+        /// </summary>
+        public static string AutomationName_DecreaseSize {
+            get {
+                return ResourceManager.GetString("AutomationName_DecreaseSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Decrease Volume.
         /// </summary>
         public static string AutomationName_DecreaseVolume {
@@ -444,6 +462,15 @@ namespace Buttercup.Control.Resources {
         public static string AutomationName_IncreaseIS {
             get {
                 return ResourceManager.GetString("AutomationName_IncreaseIS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Increase content size.
+        /// </summary>
+        public static string AutomationName_IncreaseSize {
+            get {
+                return ResourceManager.GetString("AutomationName_IncreaseSize", resourceCulture);
             }
         }
         
@@ -574,7 +601,7 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Go to Previous Header.
+        ///   Looks up a localized string similar to Go to Previous Heading.
         /// </summary>
         public static string AutomationName_PreviousSection {
             get {
@@ -592,11 +619,29 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Speak help text.
+        /// </summary>
+        public static string AutomationName_SpeakHelpText {
+            get {
+                return ResourceManager.GetString("AutomationName_SpeakHelpText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start Action.
         /// </summary>
         public static string AutomationName_StartAction {
             get {
                 return ResourceManager.GetString("AutomationName_StartAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stop self voice.
+        /// </summary>
+        public static string AutomationName_StopSelfVoicing {
+            get {
+                return ResourceManager.GetString("AutomationName_StopSelfVoicing", resourceCulture);
             }
         }
         
@@ -624,6 +669,15 @@ namespace Buttercup.Control.Resources {
         public static string AutomationName_ToggleMute {
             get {
                 return ResourceManager.GetString("AutomationName_ToggleMute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggle self voicing.
+        /// </summary>
+        public static string AutomationName_ToggleSelfVoicing {
+            get {
+                return ResourceManager.GetString("AutomationName_ToggleSelfVoicing", resourceCulture);
             }
         }
         

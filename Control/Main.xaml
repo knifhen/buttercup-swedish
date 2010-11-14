@@ -41,13 +41,14 @@
 						Grid.Row="0" Grid.Column="0" IsEnabled="True"
 						GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 						MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-						AutomationProperties.Name="Open Book"  AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationName_OpenBook, Source={StaticResource LocalizedStrings}}"
+						AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_OpenBook,Source={StaticResource LocalizedStrings}}"  
+                        AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_OpenBook, Source={StaticResource LocalizedStrings}}"
 						Click="openBookButton_Click" AutomationProperties.AcceleratorKey="O"
 						Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 						SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 						FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
                     <ToolTipService.ToolTip>
-                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_OpenBook, Source={StaticResource LocalizedStrings}}"></bc:ExtendedToolTip>
+                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_OpenBook, Source={StaticResource LocalizedStrings}}"/>
                     </ToolTipService.ToolTip>
                     <Path Height="15" Width="20" Stretch="Fill" Fill="{Binding Path=DefaultForeground}" Data="F1 M 264.296,197.944L 264.296,194.233L 253.781,194.233L 252.576,191.652L 246.667,191.652L 246.667,208L 246.816,208L 264.296,208L 264.447,208L 268.555,197.944L 264.296,197.944 Z M 248,192.986L 251.726,192.986L 252.932,195.566L 262.962,195.566L 262.962,197.944L 250.926,197.944L 248,205.104L 248,192.986 Z M 248.802,206.667L 251.821,199.277L 266.57,199.277L 263.628,206.477L 263.551,206.667L 248.802,206.667 Z " />
 				</bc:MediaButton>
@@ -55,13 +56,14 @@
 						Grid.Row="0" Grid.Column="1" 
 						GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 						MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-						AutomationProperties.Name="Navigation" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_Navigation, Source={StaticResource LocalizedStrings}}"
+						AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Navigation,Source={StaticResource LocalizedStrings}}" 
+                        AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_Navigation, Source={StaticResource LocalizedStrings}}"
 						Click="showNavPanelButton_Click" AutomationProperties.AcceleratorKey="C"
 						Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 						SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 						FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
                     <ToolTipService.ToolTip>
-                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_Navigation, Source={StaticResource LocalizedStrings}}"></bc:ExtendedToolTip>
+                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_Navigation, Source={StaticResource LocalizedStrings}}"/>
                     </ToolTipService.ToolTip>
                     <Path Width="17.3787" Height="14.6653" Stretch="Fill" Fill="{Binding Path=DefaultForeground}" Data="F1 M 298.883,279.983L 300.545,279.983L 300.545,277.983L 298.883,277.983M 298.883,275.757L 300.544,275.757L 300.544,273.757L 298.883,273.757M 298.883,271.539L 300.544,271.539L 300.544,269.537L 298.883,269.537M 298.881,267.316L 300.544,267.316L 300.544,265.317L 298.881,265.317M 303.316,275.757L 316.259,275.757L 316.259,273.757L 303.316,273.757M 303.319,279.983L 310.36,279.983L 310.36,277.983L 303.319,277.983M 310.36,269.536L 303.319,269.536L 303.319,271.537L 310.36,271.537M 303.317,267.316L 316.26,267.316L 316.26,265.317L 303.317,265.317L 303.317,267.316 Z " />
 				</bc:MediaButton>
@@ -72,13 +74,14 @@
 						Grid.Row="2" Grid.Column="0" 
 						GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 						MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-						AutomationProperties.Name="Find" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_Find, Source={StaticResource LocalizedStrings}}"
+						AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Find,Source={StaticResource LocalizedStrings}}" 
+                        AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_Find, Source={StaticResource LocalizedStrings}}"
 						Click="showSearchPanelButton_Click" AutomationProperties.AcceleratorKey="F"
 						Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 						SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 						FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
                     <ToolTipService.ToolTip>
-                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_Find, Source={StaticResource LocalizedStrings}}"></bc:ExtendedToolTip>
+                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_Find, Source={StaticResource LocalizedStrings}}"/>
                     </ToolTipService.ToolTip>
                     <Path Width="16.8987" Height="17.3894" Stretch="Fill" Fill="{Binding Path=DefaultForeground}" Data="F1 M 269.282,395.885C 269.287,393.783 270.99,392.08 273.094,392.077C 275.199,392.08 276.899,393.783 276.905,395.885C 276.899,397.989 275.199,399.691 273.094,399.693C 270.99,399.691 269.287,397.989 269.282,395.885 Z M 283.711,406.047L 284.182,405.576L 278.866,400.261L 278.397,400.731L 277.41,399.743C 278.329,398.715 278.905,397.372 278.905,395.885C 278.905,392.677 276.302,390.077 273.094,390.075C 269.886,390.077 267.286,392.677 267.283,395.885C 267.286,399.093 269.886,401.695 273.094,401.695C 274.333,401.695 275.477,401.301 276.419,400.639L 277.453,401.673L 276.981,402.145L 282.298,407.464L 283.135,406.625L 283.713,406.048L 283.711,406.047 Z " />
 				</bc:MediaButton>
@@ -86,13 +89,14 @@
 						Grid.Row="2" Grid.Column="1" 
 						GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 						MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-						AutomationProperties.Name="Add Bookmark" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_AddBookmark, Source={StaticResource LocalizedStrings}}"
+						AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_AddBookmark,Source={StaticResource LocalizedStrings}}" 
+                        AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_AddBookmark, Source={StaticResource LocalizedStrings}}"
 						IsEnabled="False" AutomationProperties.AcceleratorKey="Shift+B"
 						Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 						SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 						FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
                     <ToolTipService.ToolTip>
-                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_AddBookmark, Source={StaticResource LocalizedStrings}}"></bc:ExtendedToolTip>
+                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_AddBookmark, Source={StaticResource LocalizedStrings}}"/>
                     </ToolTipService.ToolTip>
                     <Path Width="18.6293" Height="16.98" Stretch="Fill" Fill="{Binding Path=DefaultForeground}" Data="F1 M 308.786,403.457L 306.226,403.457L 306.226,406.017L 299.494,406.017L 299.494,393.929L 302.121,393.929L 302.121,401.788L 304.12,399.648L 306.402,401.788L 306.402,393.929L 308.786,393.929M 313.854,398.569L 313.854,395.665L 311.902,395.665L 311.902,398.569L 310.12,398.569L 310.12,392.596L 309.453,392.596L 306.402,392.596L 306.402,390.373L 302.121,390.373L 302.121,392.596L 298.161,392.596L 298.161,407.353L 307.91,407.353L 310.12,405.142L 310.12,400.574L 311.902,400.574L 311.902,403.478L 313.854,403.478L 313.854,400.574L 316.79,400.574L 316.79,398.569L 313.854,398.569 Z " />
                 </bc:MediaButton>
@@ -101,13 +105,14 @@
 						Grid.Row="3" Grid.Column="0" 
 						GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 						MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-						AutomationProperties.Name="Display Settings" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_DisplaySettings, Source={StaticResource LocalizedStrings}}"
+						AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_DisplaySettings,Source={StaticResource LocalizedStrings}}" 
+                        AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_DisplaySettings, Source={StaticResource LocalizedStrings}}"
 						Click="showDisplaySettingsButton_Click" AutomationProperties.AcceleratorKey="D"
 						Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 						SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 						FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
                     <ToolTipService.ToolTip>
-                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_DisplaySettings, Source={StaticResource LocalizedStrings}}"></bc:ExtendedToolTip>
+                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_DisplaySettings, Source={StaticResource LocalizedStrings}}"/>
                     </ToolTipService.ToolTip>
                     <Path Width="18" Height="10.685" Stretch="Fill" Fill="{Binding Path=DefaultForeground}"
 						  Data="F1 M -83.9993,311.995C -86.1803,311.995 -88.1152,313.209 -89.4303,315.061L -89.623,315.331L -89.4303,315.605C -88.1152,317.456 -86.1803,318.669 -83.9993,318.671C -81.8157,318.669 -79.8861,317.456 -78.5697,315.605L -78.3769,315.331L -78.5697,315.061C -79.8861,313.209 -81.8157,311.995 -83.9993,311.995 Z M -82.7312,313.412C -82.3378,313.412 -82.0163,313.734 -82.0163,314.131C -82.0163,314.527 -82.3378,314.848 -82.7312,314.848C -83.1309,314.848 -83.4512,314.527 -83.4512,314.131C -83.4512,313.734 -83.1309,313.412 -82.7312,313.412 Z M -79.5358,315.331L -79.5788,315.387C -80.7454,316.855 -82.3027,317.732 -83.9993,317.732C -85.6985,317.732 -87.2572,316.855 -88.42,315.387L -88.4643,315.331L -88.42,315.279C -87.3835,313.967 -86.0266,313.131 -84.5397,312.968L -84.2481,312.934L -84.4746,313.12C -84.9017,313.473 -85.1764,313.998 -85.1764,314.594C -85.1752,315.652 -84.3184,316.508 -83.2585,316.51C -82.2012,316.508 -81.3444,315.652 -81.343,314.594C -81.343,314.3 -81.4148,314.027 -81.5293,313.779L -81.649,313.527L -81.4069,313.667C -80.735,314.064 -80.1152,314.603 -79.5788,315.279L -79.5358,315.331 Z" />
@@ -117,13 +122,14 @@
 						Grid.Row="3" Grid.Column="1" 
 						GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 						MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-						AutomationProperties.Name="Help"  AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_Help, Source={StaticResource LocalizedStrings}}"
+						AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_Help,Source={StaticResource LocalizedStrings}}"  
+                        AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_Help, Source={StaticResource LocalizedStrings}}"
 						Click="showHelpSettingsButton_Click" AutomationProperties.AcceleratorKey="H"
 						Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 						SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 						FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
                     <ToolTipService.ToolTip>
-                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_Help, Source={StaticResource LocalizedStrings}}"></bc:ExtendedToolTip>
+                        <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_Help, Source={StaticResource LocalizedStrings}}"/>
                     </ToolTipService.ToolTip>
                     <Path Width="11.629" Height="17" Stretch="Fill" Fill="{Binding Path=DefaultForeground}"
 						  Data="F1 M 464.733,389.076L 460.753,389.076C 460.743,388.504 460.738,388.156 460.738,388.031C 460.738,386.74 460.952,385.679 461.377,384.847C 461.804,384.015 462.657,383.078 463.936,382.038C 465.216,380.997 465.981,380.316 466.231,379.994C 466.616,379.484 466.808,378.922 466.808,378.308C 466.808,377.455 466.467,376.725 465.785,376.116C 465.105,375.507 464.186,375.203 463.031,375.203C 461.919,375.203 460.988,375.52 460.238,376.155C 459.489,376.789 458.974,377.757 458.694,379.057L 454.667,378.557C 454.783,376.696 455.575,375.114 457.047,373.814C 458.52,372.513 460.452,371.863 462.844,371.863C 465.362,371.863 467.365,372.521 468.853,373.837C 470.341,375.154 471.084,376.685 471.084,378.433C 471.084,379.401 470.811,380.316 470.265,381.18C 469.719,382.043 468.551,383.22 466.762,384.707C 465.835,385.477 465.261,386.096 465.037,386.563C 464.814,387.032 464.711,387.869 464.733,389.076 Z M 460.753,396.137L 460.753,391.752L 465.138,391.752L 465.138,396.137L 460.753,396.137 Z" />
@@ -225,13 +231,14 @@
 								HorizontalAlignment="Right" VerticalAlignment="Top"
 								GotFocus="SpeakControlOnFocus" LostFocus="Button_LostFocus"
 								MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"
-								AutomationProperties.Name="Hide Panel" AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_HidePanel,Source={StaticResource LocalizedStrings}}"
+								AutomationProperties.Name="{Binding Path=StringLibrary.AutomationName_HidePanel,Source={StaticResource LocalizedStrings}}" 
+                                AutomationProperties.HelpText="{Binding Path=StringLibrary.AutomationHelp_HidePanel,Source={StaticResource LocalizedStrings}}"
 								Margin="4,8,8,4" Click="hidePanelButton_Click" AutomationProperties.AcceleratorKey="Escape"
 								Background="{Binding Path=DefaultBackground}" Foreground="{Binding Path=DefaultForeground}"
 								SelectionBackground="{Binding Path=HighlightBackground}" SelectionForeground="{Binding Path=HighlightForeground}"
 								FocusBackground="{Binding Path=SelectionBackground}" FocusForeground="{Binding Path=SelectionForeground}">
                             <ToolTipService.ToolTip>
-                                <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_HidePanel,Source={StaticResource LocalizedStrings}}"></bc:ExtendedToolTip>
+                                <bc:ExtendedToolTip Content="{Binding Path=StringLibrary.ToolTip_HidePanel,Source={StaticResource LocalizedStrings}}"/>
                             </ToolTipService.ToolTip>
                             <Path Width="13.516" Height="13.5134" Stretch="Fill" Fill="{Binding Path=DefaultForeground}" Data="F1 M 313.465,232.534L 311.577,230.65L 306.707,235.519L 301.836,230.65L 299.949,232.534L 304.822,237.406L 299.949,242.276L 301.836,244.163L 306.707,239.292L 311.577,244.163L 313.465,242.276L 308.593,237.406L 313.465,232.534 Z " />
 						</bc:MediaButton>
