@@ -412,25 +412,25 @@ namespace Buttercup.Control
 
 			//display the stored information in book
 			//TODO Someday, this will be a list or a hashtable or something, with a loop to set out a stackpanel/list layout
-			BookInfo.BookInfoTitle.Text = "Title: " + (_currentBook.Title != null? _currentBook.Title : "(not available)");
+			BookInfo.BookInfoTitle.Text = Strings.BookInfo_Title + ": " + (_currentBook.Title ?? "(" + Strings.BookInfo_NotAvailable + ")");
 			nameForScreenReaders += BookInfo.BookInfoTitle.Text + ". ";
-			BookInfo.BookInfoCreator.Text = "Creator: " + (_currentBook.Creator != null? _currentBook.Creator : "(not available)");
+            BookInfo.BookInfoCreator.Text = Strings.BookInfo_Creator + ": " + (_currentBook.Creator ?? "(" + Strings.BookInfo_NotAvailable + ")");
 			nameForScreenReaders += BookInfo.BookInfoCreator.Text + ". ";
-			BookInfo.BookInfoPublisher.Text = "Publisher: " + (_currentBook.Publisher != null? _currentBook.Publisher : "(not available)");
+            BookInfo.BookInfoPublisher.Text = Strings.BookInfo_Publisher + ": " + (_currentBook.Publisher ?? "(" + Strings.BookInfo_NotAvailable + ")");
 			nameForScreenReaders += BookInfo.BookInfoPublisher.Text + ". ";
-			BookInfo.BookInfoLanguage.Text = "Language: " + (_currentBook.Language != null? _currentBook.Language : "(not available)");
+            BookInfo.BookInfoLanguage.Text = Strings.BookInfo_Language + ": " + (_currentBook.Language ?? "(" + Strings.BookInfo_NotAvailable + ")");
 			nameForScreenReaders += BookInfo.BookInfoLanguage.Text + ". ";
-			BookInfo.BookInfoDate.Text = "Date: " + (_currentBook.Date != null? _currentBook.Date : "(not available)");
+            BookInfo.BookInfoDate.Text = Strings.BookInfo_Date + ": " + (_currentBook.Date ?? "(" + Strings.BookInfo_NotAvailable + ")");
 			nameForScreenReaders += BookInfo.BookInfoDate.Text + ". ";
-			BookInfo.BookInfoPages.Text = "Number of Pages: " + (_currentBook.PageList.Pages != null? _currentBook.PageList.Pages.Count + "" : "(not available)");
+            BookInfo.BookInfoPages.Text = Strings.BookInfo_NumberOfPages + ": " + (_currentBook.PageList.Pages != null ? _currentBook.PageList.Pages.Count + "" : "(" + Strings.BookInfo_NotAvailable + ")");
 			nameForScreenReaders += BookInfo.BookInfoPages.Text + ". ";
-			BookInfo.BookInfoHeadingLevels.Text = "Levels of Heading: " + _currentBook.HeadingLevels;
+			BookInfo.BookInfoHeadingLevels.Text = Strings.BookInfo_LevelsOfHeading + ": " + _currentBook.HeadingLevels;
 			nameForScreenReaders += BookInfo.BookInfoHeadingLevels.Text + ". ";
-			BookInfo.BookInfoMultimediaType.Text = "Media Type: " + (_currentBook.MultimediaType != null? _currentBook.MultimediaType : "(not available)");
+            BookInfo.BookInfoMultimediaType.Text = Strings.BookInfo_MediaType + ": " + (_currentBook.MultimediaType ?? "(" + Strings.BookInfo_NotAvailable + ")");
 			nameForScreenReaders += BookInfo.BookInfoMultimediaType.Text + ". ";
-			BookInfo.BookInfoMultimediaContent.Text = "Media Content: " + (_currentBook.MultimediaContent != null? _currentBook.MultimediaContent : "(not available)");
+            BookInfo.BookInfoMultimediaContent.Text = Strings.BookInfo_MediaContent + ": " + (_currentBook.MultimediaContent ?? "(" + Strings.BookInfo_NotAvailable + ")");
 			nameForScreenReaders += BookInfo.BookInfoMultimediaContent.Text + ". ";
-			BookInfo.BookInfoTotalTime.Text = "Total Time: " + (_currentBook.TotalTime != null? _currentBook.TotalTime : "(not available)");
+            BookInfo.BookInfoTotalTime.Text = Strings.BookInfo_TotalTime + ": " + (_currentBook.TotalTime ?? "(" + Strings.BookInfo_NotAvailable + ")");
 			nameForScreenReaders += BookInfo.BookInfoTotalTime.Text + ". ";
 
 			AutomationProperties.SetName(BookInfo, nameForScreenReaders);
@@ -453,7 +453,7 @@ namespace Buttercup.Control
 
 			foreach(Heading heading in _tableOfContents.FlatHeadingList)
 			{
-				ExtendedListBoxItem newItem = new ExtendedListBoxItem();
+				var newItem = new ExtendedListBoxItem();
 				if(Application.Current.Resources.Contains(Strings.ListItemStyleKey))
 				{
 					newItem.Style = Application.Current.Resources[Strings.ListItemStyleKey] as Style;

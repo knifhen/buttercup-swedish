@@ -709,6 +709,105 @@ namespace Buttercup.Control.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creator.
+        /// </summary>
+        public static string BookInfo_Creator {
+            get {
+                return ResourceManager.GetString("BookInfo_Creator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string BookInfo_Date {
+            get {
+                return ResourceManager.GetString("BookInfo_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string BookInfo_Language {
+            get {
+                return ResourceManager.GetString("BookInfo_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Levels of heading.
+        /// </summary>
+        public static string BookInfo_LevelsOfHeading {
+            get {
+                return ResourceManager.GetString("BookInfo_LevelsOfHeading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Media content.
+        /// </summary>
+        public static string BookInfo_MediaContent {
+            get {
+                return ResourceManager.GetString("BookInfo_MediaContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Media type.
+        /// </summary>
+        public static string BookInfo_MediaType {
+            get {
+                return ResourceManager.GetString("BookInfo_MediaType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to not available.
+        /// </summary>
+        public static string BookInfo_NotAvailable {
+            get {
+                return ResourceManager.GetString("BookInfo_NotAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of Pages.
+        /// </summary>
+        public static string BookInfo_NumberOfPages {
+            get {
+                return ResourceManager.GetString("BookInfo_NumberOfPages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publisher.
+        /// </summary>
+        public static string BookInfo_Publisher {
+            get {
+                return ResourceManager.GetString("BookInfo_Publisher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string BookInfo_Title {
+            get {
+                return ResourceManager.GetString("BookInfo_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total time.
+        /// </summary>
+        public static string BookInfo_TotalTime {
+            get {
+                return ResourceManager.GetString("BookInfo_TotalTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Change Size.
         /// </summary>
         public static string ChangeSize {
