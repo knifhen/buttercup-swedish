@@ -38,36 +38,36 @@ namespace Control.MVP.Presenters
             View.SetPresenterReference(this);
 
             // View events
-            View.DownLevel += View_DownLevel;
-            View.UpLevel += View_UpLevel;
-            View.NextSection += View_NextSection;
-            View.PreviousSection += View_PreviousSection;
-            View.TogglePlayPause += View_TogglePlayPause;
+            View.DownLevel += ViewDownLevel;
+            View.UpLevel += ViewUpLevel;
+            View.NextSection += ViewNextSection;
+            View.PreviousSection += ViewPreviousSection;
+            View.TogglePlayPause += ViewTogglePlayPause;
             View.SetBookmark += View_SetBookmark;
-            View.AudioCompleted += View_AudioCompleted;
-            View.VolumeChanged += View_VolumeChanged;
-            View.PreviousPage += View_PreviousPage;
-            View.NextPage += view_NextPage;
-            View.ToggleSelfVoicing += new EventHandler(View_ToggleSelfVoicing);
-            View.ToggleMuting += new EventHandler(View_ToggleMuting);
+            View.AudioCompleted += ViewAudioCompleted;
+            View.VolumeChanged += ViewVolumeChanged;
+            View.PreviousPage += ViewPreviousPage;
+            View.NextPage += ViewNextPage;
+            View.ToggleSelfVoicing += new EventHandler(ViewToggleSelfVoicing);
+            View.ToggleMuting += new EventHandler(ViewToggleMuting);
 
-            View.SelfVoicingSpeakText += View_SelfVoicingSpeakText;
-            View.SpeakableElementSelected += View_SpeakableElementSelected;
+            View.SelfVoicingSpeakText += ViewSelfVoicingSpeakText;
+            View.SpeakableElementSelected += ViewSpeakableElementSelected;
             View.SectionChanged += View_SectionChanged;
 
             // Hook into relevent dependent view events
-            View.ApplicationView.BookChanged += ApplicationView_BookChanged;
-            View.ApplicationView.BookLoadStarted += ApplicationView_BookLoadStarted;
-            View.ApplicationView.BookLoadFailed += ApplicationView_BookLoadFailed;
-            View.ApplicationView.BookDisplayed += ApplicationView_BookDisplayed;
+            View.ApplicationView.BookChanged += ApplicationViewBookChanged;
+            View.ApplicationView.BookLoadStarted += ApplicationViewBookLoadStarted;
+            View.ApplicationView.BookLoadFailed += ApplicationViewBookLoadFailed;
+            View.ApplicationView.BookDisplayed += ApplicationViewBookDisplayed;
 
-            View.ApplicationView.DisplaySurface.ItemSelected += DisplaySurface_ItemSelected;
-            View.ApplicationView.DisplaySurface.GestureRaised += DisplaySurface_GestureRaised;
-            View.NavigationView.ItemSelected += NavigationView_ItemSelected;
+            View.ApplicationView.DisplaySurface.ItemSelected += DisplaySurfaceItemSelected;
+            View.ApplicationView.DisplaySurface.GestureRaised += DisplaySurfaceGestureRaised;
+            View.NavigationView.ItemSelected += NavigationViewItemSelected;
 
-            View.SearchView.NavigateToPage += SearchView_NavigateToPage;
-            View.SearchView.SearchForSection += SearchView_SearchForSection;
-            View.SearchView.SearchSelected += SearchView_SearchSelected;
+            View.SearchView.NavigateToPage += SearchViewNavigateToPage;
+            View.SearchView.SearchForSection += SearchViewSearchForSection;
+            View.SearchView.SearchSelected += SearchViewSearchSelected;
 
             // Initialise Button State
             View.SetNavButtonState(false);
@@ -107,7 +107,7 @@ namespace Control.MVP.Presenters
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ApplicationView_BookChanged(object sender, EventArgs e)
+        private void ApplicationViewBookChanged(object sender, EventArgs e)
         {
             Book currentBook = base.MainState.CurrentBook;
 
@@ -130,7 +130,7 @@ namespace Control.MVP.Presenters
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void ApplicationView_BookDisplayed(object sender, EventArgs e)
+        void ApplicationViewBookDisplayed(object sender, EventArgs e)
         {
             // The book should play as soon as it has been rendered on the surface.
 
@@ -144,7 +144,7 @@ namespace Control.MVP.Presenters
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void ApplicationView_BookLoadFailed(object sender, EventArgs e)
+        void ApplicationViewBookLoadFailed(object sender, EventArgs e)
         {
             if (base.MainState.CurrentBook != null)
             {
@@ -161,7 +161,7 @@ namespace Control.MVP.Presenters
             }
         }
 
-        void ApplicationView_BookLoadStarted(object sender, EventArgs e)
+        void ApplicationViewBookLoadStarted(object sender, EventArgs e)
         {
             // Disable the player
             DisablePlayer();
@@ -177,7 +177,7 @@ namespace Control.MVP.Presenters
             View.SetPlayButtonState(false, false);
         }
 
-        void DisplaySurface_GestureRaised(object sender, Control.UI.Gestures.MouseGestureEventArgs e)
+        void DisplaySurfaceGestureRaised(object sender, Control.UI.Gestures.MouseGestureEventArgs e)
         {
             switch (e.Gesture)
             {
@@ -211,7 +211,7 @@ namespace Control.MVP.Presenters
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DisplaySurface_ItemSelected(object sender, BookElementSelectedEventArgs e)
+        private void DisplaySurfaceItemSelected(object sender, BookElementSelectedEventArgs e)
         {
             if (_state.Navigator != null)
             {
@@ -291,7 +291,7 @@ namespace Control.MVP.Presenters
             }
         }
 
-        private void NavigationView_ItemSelected(object sender, ItemSelectedEventArgs e)
+        private void NavigationViewItemSelected(object sender, ItemSelectedEventArgs e)
         {
             if (_state.Navigator != null)
             {
@@ -361,11 +361,11 @@ namespace Control.MVP.Presenters
         /// <param name="canResumePhrase"></param>
         private void PlayPhrase(Phrase currentPhrase, bool canResumePhrase)
         {
-            Logger.Log("Playing phrase of element: {0}", currentPhrase.ElementID);
+            Logger.Log("Playing phrase of element: {0}", currentPhrase.ElementId);
 
             // If in the meantime the navigator has moved to another element then don't even bother trying
             // to play it.
-            if (_state.Navigator.CurrentElementID == currentPhrase.ElementID)
+            if (_state.Navigator.CurrentElementID == currentPhrase.ElementId)
             {
                 //Only want to execute speaking phrases if the element exists on the surface.
                 if (View.ApplicationView.DisplaySurface.ElementExists(_state.Navigator.CurrentElementID) || currentPhrase.Silent)
@@ -439,7 +439,7 @@ namespace Control.MVP.Presenters
             }
         }
 
-        private void SearchView_NavigateToPage(object sender, PageNumEventArgs e)
+        private void SearchViewNavigateToPage(object sender, PageNumEventArgs e)
         {
             if (_state.Navigator != null)
             {
@@ -459,9 +459,9 @@ namespace Control.MVP.Presenters
             }
         }
 
-        private void SearchView_SearchForSection(object sender, SearchEventArgs e)
+        private void SearchViewSearchForSection(object sender, SearchEventArgs e)
         {
-            List<SearchResult> searchResults = new List<SearchResult>();
+            var searchResults = new List<SearchResult>();
             //TODO Should the presenter be using XElements?
             if (_state.Navigator != null)
             {
@@ -483,7 +483,7 @@ namespace Control.MVP.Presenters
             View.SearchView.SearchResults = searchResults;
         }
 
-        private void SearchView_SearchSelected(object sender, ItemSelectedEventArgs e)
+        private void SearchViewSearchSelected(object sender, ItemSelectedEventArgs e)
         {
             if (_state.Navigator != null)
             {
@@ -521,22 +521,22 @@ namespace Control.MVP.Presenters
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void View_AudioCompleted(object sender, EventArgs e)
+        private void ViewAudioCompleted(object sender, EventArgs e)
         {
             MoveNext();
         }
 
-        private void View_DownLevel(object sender, EventArgs e)
+        private void ViewDownLevel(object sender, EventArgs e)
         {
             DownLevel();
         }
 
-        private void view_NextPage(object sender, EventArgs e)
+        private void ViewNextPage(object sender, EventArgs e)
         {
             NextPage();
         }
 
-        private void View_NextSection(object sender, EventArgs e)
+        private void ViewNextSection(object sender, EventArgs e)
         {
             NextSection();
         }
@@ -547,7 +547,7 @@ namespace Control.MVP.Presenters
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void View_TogglePlayPause(object sender, EventArgs e)
+        private void ViewTogglePlayPause(object sender, EventArgs e)
         {
 			if(_state.IsPlaying)
 			{
@@ -565,12 +565,12 @@ namespace Control.MVP.Presenters
 			}
         }
 
-        private void View_PreviousPage(object sender, EventArgs e)
+        private void ViewPreviousPage(object sender, EventArgs e)
         {
             PreviousPage();
         }
 
-        private void View_PreviousSection(object sender, EventArgs e)
+        private void ViewPreviousSection(object sender, EventArgs e)
         {
             PreviousSection();
         }
@@ -581,7 +581,7 @@ namespace Control.MVP.Presenters
             // will be listening to this event.
         }
 
-        private void View_SelfVoicingSpeakText(object sender, SpeechTextEventArgs e)
+        private void ViewSelfVoicingSpeakText(object sender, SpeechTextEventArgs e)
         {
             PlayTextSpeech(e);
         }
@@ -591,12 +591,12 @@ namespace Control.MVP.Presenters
             throw new NotImplementedException();
         }
 
-        private void View_SpeakableElementSelected(object sender, ElementSelectedEventArgs e)
+        private void ViewSpeakableElementSelected(object sender, ElementSelectedEventArgs e)
         {
             PlaySpeakableElement(e);
         }
 
-        void View_ToggleSelfVoicing(object sender, EventArgs e)
+        void ViewToggleSelfVoicing(object sender, EventArgs e)
         {
             if (View.SelfVoicingEnabled)
             {
@@ -608,7 +608,7 @@ namespace Control.MVP.Presenters
             }
         }
 
-        private void View_UpLevel(object sender, EventArgs e)
+        private void ViewUpLevel(object sender, EventArgs e)
         {
             UpLevel();
         }
@@ -628,7 +628,7 @@ namespace Control.MVP.Presenters
             }
         }
 
-        private void View_ToggleMuting(object sender, EventArgs e)
+        private void ViewToggleMuting(object sender, EventArgs e)
         {
             if (View.AudioMuted)
             {
@@ -650,7 +650,7 @@ namespace Control.MVP.Presenters
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void View_VolumeChanged(object sender, VolumeChangedEventArgs e)
+        private void ViewVolumeChanged(object sender, VolumeChangedEventArgs e)
         {
             if (!View.AudioMuted)
             {

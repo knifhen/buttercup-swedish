@@ -134,7 +134,7 @@ namespace Buttercup.Control.Model
 			_currentPhraseConstruction = new PhraseConstructionKit();
 			Phrase currentPhrase = _currentPhraseConstruction.ConstructedPhrase;
 			currentPhrase.Text = GetSpeakableText();
-			currentPhrase.ElementID = Navigator.CurrentElementID;
+			currentPhrase.ElementId = Navigator.CurrentElementID;
 
 			Book currentBook = _mainState.CurrentBook;
 			string bookPath = currentBook.FolderPath.FullName;
@@ -263,13 +263,17 @@ namespace Buttercup.Control.Model
 			if(audioElement != null)
 			{
 				XAttribute audioSrc = audioElement.Attribute("src");
-				if(audioSrc != null)
+                XAttribute xAudioClipBegin = audioElement.Attribute("clipBegin");
+                XAttribute xAudioClipEnd = audioElement.Attribute("clipEnd");
+				if(audioSrc != null && xAudioClipBegin != null)
 				{
 					string audioFilePath = audioSrc.Value;
+                    string audioClipBegin = xAudioClipBegin.Value;
+                    string audioClipEnd = xAudioClipEnd.Value;
 					audioFilePath = _mainState.BookFileSystem.CombinePath
 							(_mainState.CurrentBook.FolderPath.FullName, audioFilePath);
-
-					Logger.Log("OpenAsync Audio File {0}", audioFilePath);
+                    
+                    Logger.Log("OpenAsync Audio File {0}. {1} - {2}", new string[] {audioFilePath, audioClipBegin, audioClipEnd});
 
 					//Need to coerce the expected file next to be received.
 					_currentRequestedFileUri = audioFilePath;
@@ -317,15 +321,19 @@ namespace Buttercup.Control.Model
 			string audioClipStart = audioElement.Attribute("clipBegin").Value;
 			string audioClipEnd = audioElement.Attribute("clipEnd").Value;
 
-			Logger.Log("CompletedAsync Audio File {0}", audioElement.Attribute("src").Value);
+			Logger.Log("CompletedAsync Audio File {0} {1} - {2}", audioElement.Attribute("src").Value, audioClipStart, audioClipEnd);
 
 			Phrase currentPhrase = phraseConstruction.ConstructedPhrase;
-			currentPhrase.Audio = new Audio
+		    TimeSpan clipStart = ValueConversionHelper.GetConvertedTimeSpan(audioClipStart);
+		    TimeSpan clipEnd = ValueConversionHelper.GetConvertedTimeSpan(audioClipEnd);
+		    currentPhrase.Audio = new Audio
 			{
 				SourceStream = e.Result,
-				ClipStart = ValueConversionHelper.GetConvertedTimeSpan(audioClipStart),
-				ClipEnd = ValueConversionHelper.GetConvertedTimeSpan(audioClipEnd)
+				ClipStart = clipStart,
+				ClipEnd = clipEnd
 			};
+
+            Logger.Log("Converted begin and end {0}:{1} - {2}:{3}", new string[] { clipStart.Seconds.ToString(), clipStart.Milliseconds.ToString(), clipEnd.Seconds.ToString(), clipEnd.Milliseconds.ToString() });
 
 			if(PresentPhrase != null)
 			{

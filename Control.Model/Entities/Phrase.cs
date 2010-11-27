@@ -16,7 +16,7 @@ namespace Buttercup.Control.Model.Entities
 
         public Boolean Silent { get; set; }
 
-        public string ElementID { get; set; }
+        public string ElementId { get; set; }
 
 		#endregion Properties 
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
+
 namespace Buttercup.Control.Model
 {
     public class ValueConversionHelper
@@ -40,18 +41,22 @@ namespace Buttercup.Control.Model
             int seconds = 0;
             int milliseconds = 0;
 
+            
             Match currentMatch = _timeSpanExtractor.Match(input);
+
+            
 
             Int32.TryParse(currentMatch.Groups[1].Value, out hours);
             Int32.TryParse(currentMatch.Groups[2].Value, out minutes);
             Int32.TryParse(currentMatch.Groups[3].Value, out seconds);
 
             //Convert fraction of a second (variable length) into milliseconds
-            string rawTicks = "." + currentMatch.Groups[4].Value;
+            string rawTicks = "," + currentMatch.Groups[4].Value;
+            
             double secondsFraction = 0.0;
             Double.TryParse(rawTicks, out secondsFraction);
             milliseconds = (int)(secondsFraction * 1000.0);
-
+            
             return new TimeSpan(0, hours, minutes, seconds, milliseconds);
         }
 
