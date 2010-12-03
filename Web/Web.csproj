@@ -85,7 +85,9 @@
     <Content Include="ClientBin\ButtercupControl.xap" />
     <Content Include="ClientBin\ImageDisplayer.xap" />
     <Content Include="Default.htm" />
-    <Content Include="dtbook2xaml.xsl" />
+    <Content Include="dtbook2xaml.xsl">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="dtbook2xhtml.xsl" />
     <Content Include="notavailable.jpg" />
     <Content Include="Scripts\ButtercupOperations.js" />

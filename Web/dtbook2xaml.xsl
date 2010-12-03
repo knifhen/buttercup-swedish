@@ -179,13 +179,39 @@
 	<xsl:template match="dtb:p">
 		<xsl:choose>
 			<!-- If this p has a child(ren) then process these within a TextBlock as Runs -->
-			<xsl:when test="dtb:sent | dtb:span | dtb:a">
-				<Border>
-					<TextBlock TextWrapping="Wrap" Margin="0, 0, 0, 10" >
-						<xsl:call-template name="copyCommonAttributes" />
-						<xsl:apply-templates select="dtb:sent | dtb:span | dtb:a" />
-					</TextBlock>
-				</Border>
+      <xsl:when test="dtb:sent | dtb:span">
+        <TextBlock TextWrapping="Wrap" Margin="0, 0, 0, 10" >
+          <xsl:call-template name="copyCommonAttributes" />
+          <xsl:if test="text()[1]">
+            <xsl:value-of select="text()[1]"/>
+          </xsl:if>
+          <xsl:apply-templates select="dtb:sent | dtb:span" />
+          <xsl:if test="text()[2]">
+            <xsl:value-of select="text()[2]"/>
+          </xsl:if>
+        </TextBlock>
+      </xsl:when>
+
+			<xsl:when test="dtb:a">
+        <Border>
+          <controls:WrapPanel Orientation="Horizontal">
+            <xsl:if test="text()[1]">
+              <TextBlock TextWrapping="Wrap" Margin="0, 0, 0, 10" >
+                <xsl:call-template name="copyCommonAttributes" />
+                <xsl:value-of select="text()[1]"/>
+              </TextBlock>
+            </xsl:if>
+            <xsl:apply-templates select="dtb:a" />
+            <xsl:if test="text()[2]">
+              <TextBlock TextWrapping="Wrap" Margin="0, 0, 0, 10" >
+                <xsl:if test="not(text()[1])">
+                  <xsl:call-template name="copyCommonAttributes" />
+                </xsl:if>
+                <xsl:value-of select="text()[2]"/>
+              </TextBlock>
+            </xsl:if>
+          </controls:WrapPanel>
+        </Border>
 			</xsl:when>
 			<!-- imggroups within p's have their own template and shouldn't be wrapped in a TextBlock
 			like sentences are -->
@@ -263,10 +289,15 @@
 	</xsl:template>
 
 	<xsl:template match="dtb:p//dtb:a">
-		<Run>
-			<xsl:call-template name="copyCommonAttributes" />
-			<xsl:call-template name="writeContents" />
-		</Run>
+    <HyperlinkButton TargetName="_blank" IsTabStop="False">
+      <xsl:call-template name="copyCommonAttributes" />
+      <xsl:attribute name="Content">
+        <xsl:value-of select="text()"/>
+      </xsl:attribute>
+      <xsl:attribute name="NavigateUri">
+        <xsl:value-of select="@href"/>
+      </xsl:attribute>
+    </HyperlinkButton>
 	</xsl:template>
 
 	<!-- All other children of a sent are displayed as runs -->

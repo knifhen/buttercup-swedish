@@ -27,13 +27,10 @@ ScrollToElement = function(elementID)
     }
 }
 
-XamlTransformationComplete = function(param)
-{
-    try
-    {
+XamlTransformationComplete = function (param) {
+    try {
         buttercupPlayer.Content.XamlSurface.XamlTransformationComplete(param);
-    } catch (ex)
-    {
+    } catch (ex) {
         alert('ERROR! ' + ex.message);
         alert(buttercupPlayer);
         alert(buttercupPlayer.Content);

@@ -30,7 +30,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control.MVP.Tests", "Contro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control.Compression", "Control.Compression\Control.Compression.csproj", "{1573636B-F562-4C50-947A-D77684514FD6}"
 EndProject
-Project("{00000000-0000-0000-0000-000000000000}") = "ButtercupTests", "ButtercupTests\ButtercupTests.csproj", "{27991850-5215-4932-AEE0-8CDCE14A830F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtercupTests", "ButtercupTests\ButtercupTests.csproj", "{27991850-5215-4932-AEE0-8CDCE14A830F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
