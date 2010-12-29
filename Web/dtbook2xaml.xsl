@@ -88,7 +88,7 @@
 		<xsl:apply-templates />
 	</xsl:template>
 
-	<xsl:template match="dtb:img">
+	<xsl:template match="dtb:img2">
 		<Border>
 			<Image Source="{@src}" Stretch="None" HorizontalAlignment="Center" Margin="10">
 				<xsl:call-template name="copyCommonAttributes" />
@@ -102,7 +102,16 @@
 		</Border>
 	</xsl:template>
 
-	<xsl:template match="dtb:caption">
+  <xsl:template match="dtb:img">
+    <Border>
+      <bc:SvgImage Source="{@src}">
+        <xsl:call-template name="copyCommonAttributes" />
+      </bc:SvgImage>
+    </Border>
+  </xsl:template>
+
+
+  <xsl:template match="dtb:caption">
 		<Border>
 			<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap">
 				<xsl:call-template name="copyCommonAttributes" />
