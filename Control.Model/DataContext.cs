@@ -284,11 +284,30 @@ namespace Buttercup.Control.Model
         {
             foreach (XElement imageElement in _book.Xml.Descendants(_book.xmlNamespace + "img"))
             {
+                
+
                 XAttribute imgSrc = imageElement.Attribute("src");
+
+                
+
                 if (imgSrc != null)
                 {
                     string src = imgSrc.Value;
-                    imgSrc.Value = FileSystem.CombinePath(_book.FolderPath.FullName, src);
+
+                    Logger.Log("ConvertImagePaths: {0}", new String[]{src});
+
+                    if(!src.StartsWith("http"))
+                    {
+                        src = FileSystem.CombinePath(_book.FolderPath.FullName, src);
+                    }
+
+                    if(src.EndsWith(".svg"))
+                    {
+                        src = "http://www-qa.blissonline.se/proxy/svg?url=" + src;
+                    }
+
+                    imgSrc.Value = src;
+
                 }
             }
         }

@@ -39,7 +39,9 @@ namespace Buttercup.Control
 
             if (Source.EndsWith(".svg"))
             {
-                Logger.Log("svg image detected");
+                var source = new Uri("http://www-qa.blissonline.se/proxy/svg?url=" + Source, UriKind.Absolute);
+                Logger.Log("Svg url: " + "http://www-qa.blissonline.se/proxy/svg?url=" + Source);
+                Image.SetValue(Image.SourceProperty, new BitmapImage(source));
             }
             else
             {
