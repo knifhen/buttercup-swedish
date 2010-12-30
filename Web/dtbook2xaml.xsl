@@ -102,15 +102,6 @@
 		</Border>
 	</xsl:template>
 
-  <xsl:template match="dtb:img2">
-    <Border>
-      <bc:SvgImage Source="{@src}">
-        <xsl:call-template name="copyCommonAttributes" />
-      </bc:SvgImage>
-    </Border>
-  </xsl:template>
-
-
   <xsl:template match="dtb:caption">
 		<Border>
 			<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap">

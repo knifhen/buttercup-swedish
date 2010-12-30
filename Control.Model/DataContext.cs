@@ -284,12 +284,10 @@ namespace Buttercup.Control.Model
         {
             foreach (XElement imageElement in _book.Xml.Descendants(_book.xmlNamespace + "img"))
             {
-                
-
                 XAttribute imgSrc = imageElement.Attribute("src");
-
-                
-
+                XAttribute imgHeight = imageElement.Attribute("height");
+                XAttribute imgWidth = imageElement.Attribute("width");
+ 
                 if (imgSrc != null)
                 {
                     string src = imgSrc.Value;
@@ -304,6 +302,14 @@ namespace Buttercup.Control.Model
                     if(src.EndsWith(".svg"))
                     {
                         src = "http://www-qa.blissonline.se/proxy/svg?url=" + src;
+                        if(imgHeight != null)
+                        {
+                            src += "&height=" + imgHeight.Value;
+                        } 
+                        if(imgWidth != null)
+                        {
+                            src += "&width=" + imgWidth.Value;
+                        }
                     }
 
                     imgSrc.Value = src;
